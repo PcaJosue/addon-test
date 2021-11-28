@@ -11,7 +11,6 @@
             <div class="main__list-item" *ngFor='let addon of addonList$ | async'>
                 <app-addon [addon]='addon' (onUpdate)='save($event)'> </app-addon>
                 <button class='button' (click)='update(addon)'>update</button>
-                <button class='button' (click)='deleteAddon(addon)'>delete</button>
             </div>
         </div>
     </div>

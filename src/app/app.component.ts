@@ -68,7 +68,4 @@ export class AppComponent implements OnInit {
     })
   }
 
-  deleteAddon(addon) {
-
-  }
 }
