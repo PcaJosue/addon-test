@@ -10,6 +10,10 @@ import { AddonService } from './services/addon.service';
 export class AppComponent {
   title = 'Addon';
   addon: AddonModel;
+
+  addonSelected: AddonModel;
+  addonList: AddonModel[];
+
   constructor(private addonService: AddonService) {
     this.addon = {
       characteristics: [{

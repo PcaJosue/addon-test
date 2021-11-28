@@ -1,1 +1,13 @@
-<app-addon [addon]='addon'></app-addon>
+<div class='main'>
+    <H2 class='main__title'>Addon Test</H2>
+    <div class="main__content">
+        <div class='main__form'>
+            <h3>Form</h3>
+            <app-form [addon]='addonSelected'></app-form>
+        </div>
+        <div class='main__list'>
+            <h3>List:</h3>
+            <app-addon *ngFor='let addon of addonList' [addon]='addon'> </app-addon>
+        </div>
+    </div>
+</div>

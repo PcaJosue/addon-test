@@ -1,6 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { AddonModel } from 'src/app/graphql/models';
 
 @Component({
   selector: 'app-form',
@@ -52,6 +51,25 @@ export class FormComponent implements OnInit {
       this.error = `please fill all required fields`
       return;
     }
+    this.form.value.id ? this.updateObject() : this.createObject();
+    this.form.reset();
+  }
+
+  updateObject() {
+    const addonObject: any = {
+      id: this.form.value.id,
+      characteristics: {
+        value: {
+          min: this.form.value.min,
+          max: this.form.value.max
+        }
+      },
+      icon: this.form.value.icon,
+    }
+    this.onSave.emit({ action: 'update', addon: addonObject })
+  }
+
+  createObject() {
 
     const addonObject: any = {
       author: this.form.value.author,
@@ -68,17 +86,6 @@ export class FormComponent implements OnInit {
       icon: this.form.value.icon,
       name: this.form.value.name
     }
-
-    if (this.form.value.id) {
-      addonObject.id = this.form.value.id
-      this.onSave.emit({ action: 'update', addon: addonObject })
-    }
-    else {
-      this.onSave.emit({ action: 'create', addon: addonObject })
-    }
-    this.form.reset();
-
-
+    this.onSave.emit({ action: 'create', addon: addonObject })
   }
-
 }
