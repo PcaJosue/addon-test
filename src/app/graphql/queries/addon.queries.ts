@@ -1,6 +1,6 @@
 export const getAddonByID = `
-    query getAddon{
-        getAddon(id:"f9abf63a-3dcc-400a-a445-7be24fa723be"){
+    query getAddon($id:ID!){
+        getAddon(id:$id){
             id
             author
             characteristics {
@@ -14,7 +14,6 @@ export const getAddonByID = `
                 }
             }
             name
-            icon
         }
     }
 `

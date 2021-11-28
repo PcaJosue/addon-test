@@ -1,12 +1,19 @@
 import { TestBed, async } from '@angular/core/testing';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { StoreModule } from '@ngrx/store';
 import { AppComponent } from './app.component';
+import { AddonComponent } from './component/addon/addon.component';
+import { FormComponent } from './component/form/form.component';
+import { addonReducer } from './reducers';
 
 describe('AppComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [
-        AppComponent
+        AppComponent, FormComponent, AddonComponent
       ],
+      imports: [ReactiveFormsModule, FormsModule, StoreModule.forRoot({ addons: addonReducer }),
+      ]
     }).compileComponents();
   }));
 
@@ -16,16 +23,11 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'Addon'`, () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.componentInstance;
-    expect(app.title).toEqual('Addon');
-  });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement;
-    expect(compiled.querySelector('.content span').textContent).toContain('Addon app is running!');
+    expect(compiled.querySelector('.main__title').textContent).toContain('Addon Test');
   });
 });

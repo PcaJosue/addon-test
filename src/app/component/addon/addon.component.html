@@ -1,12 +1,12 @@
-<div class='addon'>
+<div class='addon' *ngIf='addon'>
     <img class='addon__icon' src="../assets/icons/{{addon.icon}}.svg" alt="icon">
     <div class="container">
         <div class="name">{{addon.characteristics[0].label | titlecase}}</div>
-        <div class="slider-track"></div>
-        <input type="range" min="0" max="100" [value]="addon.characteristics[0].value.min " id="slider-1"
-            (input)="slideOne()">
-        <input type="range" min="0" max="100" [value]="addon.characteristics[0].value.max" id="slider-2"
-            (input)="slideTwo()">
+        <div [id]='track' class="slider-track"></div>
+        <input type="range" (change)='sendValues()' min="0" max="100" [value]="addon.characteristics[0].value.min "
+            [id]="slider1" (input)="slideOne()">
+        <input type="range" (change)='sendValues()' min="0" max="100" [value]="addon.characteristics[0].value.max"
+            [id]="slider2" (input)="slideTwo()">
         <div class='addon__labels'>
             <span>{{addon.characteristics[0].minLabel}}</span>
             <span>{{addon.characteristics[0].medLabel}}</span>

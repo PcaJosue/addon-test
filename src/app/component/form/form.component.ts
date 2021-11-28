@@ -20,13 +20,13 @@ export class FormComponent implements OnInit {
     if (this.addon?.id) {
       this.form = new FormGroup({
         id: new FormControl(this.addon.id),
-        name: new FormControl(this.addon.name, [Validators.required]),
-        author: new FormControl(this.addon.author),
+        name: new FormControl({ value: this.addon.name, disabled: true }, [Validators.required]),
+        author: new FormControl({ value: this.addon.author, disabled: true }),
         icon: new FormControl(this.addon.icon, [Validators.required]),
-        label: new FormControl(this.addon.characteristics[0].label, [Validators.required]),
-        maxLabel: new FormControl(this.addon.characteristics[0].maxLabel),
-        medLabel: new FormControl(this.addon.characteristics[0].medLabel),
-        minLabel: new FormControl(this.addon.characteristics[0].minLabel),
+        label: new FormControl({ value: this.addon.characteristics[0].label, disabled: true }, [Validators.required]),
+        maxLabel: new FormControl({ value: this.addon.characteristics[0].maxLabel, disabled: true }),
+        medLabel: new FormControl({ value: this.addon.characteristics[0].medLabel, disabled: true }),
+        minLabel: new FormControl({ value: this.addon.characteristics[0].minLabel, disabled: true }),
         max: new FormControl(this.addon.characteristics[0].value.max, [Validators.required]),
         min: new FormControl(this.addon.characteristics[0].value.min, [Validators.required])
       })
@@ -64,7 +64,7 @@ export class FormComponent implements OnInit {
           max: this.form.value.max
         }
       },
-      icon: this.form.value.icon,
+      // icon: this.form.value.icon,
     }
     this.onSave.emit({ action: 'update', addon: addonObject })
   }

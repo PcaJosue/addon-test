@@ -8,18 +8,45 @@ describe('AddonComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ AddonComponent ]
+      declarations: [AddonComponent],
+      imports: []
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {
     fixture = TestBed.createComponent(AddonComponent);
     component = fixture.componentInstance;
+    component.addon = component.addon = {
+      characteristics: [{
+        label: 'angle',
+        maxLabel: 'directly above',
+        medLabel: '',
+        minLabel: 'Front on',
+        value: {
+          max: 100,
+          min: 0
+        }
+      },
+      {
+        label: 'angle',
+        maxLabel: 'directly above',
+        medLabel: '',
+        minLabel: 'Front on',
+        value: {
+          max: 80,
+          min: 20
+        }
+      }],
+      name: 'Addon ABCD',
+      author: 'Josue Pacheco',
+      icon: 'angle',
+      id: 'adsf'
+    }
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it('should create addon', () => {
     expect(component).toBeTruthy();
   });
 });

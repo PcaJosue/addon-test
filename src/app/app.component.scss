@@ -24,5 +24,9 @@
         flex-direction: column;
         align-items: center;
         gap: 1rem;
+        &-item {
+            display: flex;
+            gap: 1rem;
+        }
     }
 }

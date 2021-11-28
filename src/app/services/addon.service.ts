@@ -16,7 +16,7 @@ export class AddonService {
   }
 
   getAddonByID(id: string): any {
-    return API.graphql(graphqlOperation(queries.getAddonByID))
+    return API.graphql(graphqlOperation(queries.getAddonByID, { id: id }))
   }
 
   updateAddon(addon: UpdateAddonInput): any {

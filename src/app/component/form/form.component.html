@@ -35,12 +35,12 @@
     </div>
     <div class='field'>
         <label>Max Value*:</label>
-        <input formControlName='max'>
+        <input formControlName='max' max='100' min="0" type='number'>%
     </div>
     <div class='field'>
         <label>Min Value*:</label>
-        <input formControlName='min'>
+        <input formControlName='min' type='number' max="100" min="0">%
     </div>
 
-    <button (click)='save()'>Save</button>
+    <button class='button' (click)='save()'>Save</button>
 </form>

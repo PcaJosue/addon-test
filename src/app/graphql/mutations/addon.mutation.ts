@@ -15,7 +15,6 @@ min
 }
 }
 name
-icon
 }
 }
 `;
@@ -25,7 +24,6 @@ export const updateAddon = `
     mutation updateAddon($addon:UpdateAddonInput!){
         updateAddon(input: $addon) {
             author
-            icon
             id
             name
             characteristics {

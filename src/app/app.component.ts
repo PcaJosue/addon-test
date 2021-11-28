@@ -1,5 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { Store } from '@ngrx/store';
 import { AddonModel, CreateAddonInput } from './graphql/models';
+import { selectAddons } from './reducers';
+import { createAddon, setAddon, updateAddon } from './reducers/actions';
 import { AddonService } from './services/addon.service';
 
 @Component({
@@ -7,80 +10,65 @@ import { AddonService } from './services/addon.service';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent {
-  title = 'Addon';
+export class AppComponent implements OnInit {
   addon: AddonModel;
 
   addonSelected: AddonModel;
-  addonList: AddonModel[];
+  addonList$ = this.store.select(selectAddons);
+  selecting: boolean = false;
+  constructor(private addonService: AddonService, private store: Store) { }
 
-  constructor(private addonService: AddonService) {
-    this.addon = {
-      characteristics: [{
-        label: 'angle',
-        maxLabel: 'directly above',
-        medLabel: '',
-        minLabel: 'Front on',
-        value: {
-          max: 100,
-          min: 0
-        }
-      },
-      {
-        label: 'angle',
-        maxLabel: 'directly above',
-        medLabel: '',
-        minLabel: 'Front on',
-        value: {
-          max: 80,
-          min: 20
-        }
-      }],
-      name: 'Addon ABCD',
-      author: 'Josue Pacheco',
-      icon: 'angle',
-      id: 'adsf'
+  ngOnInit() {
+
+    const addonIds = localStorage.getItem('addons');
+    if (addonIds) this.fetchAddons(JSON.parse(addonIds));
+  }
+
+  async fetchAddons(addonIds) {
+    for (let id of addonIds) {
+      const addon = await this.addonService.getAddonByID(id);
+      this.store.dispatch(setAddon({ addon: addon.data.getAddon }));
     }
   }
 
-  saveAddon() {
 
-    const newAddon: CreateAddonInput = {
-      characteristics: [{
-        label: 'angle',
-        maxLabel: 'directly above',
-        medLabel: '',
-        minLabel: 'Front on',
-        value: {
-          max: 100,
-          min: 0
-        }
-      }],
-      name: 'Addon ABCD',
-      author: 'Josue Pacheco',
-      icon: 'angle'
-    }
-    this.addonService.createNewAddon(newAddon).then(data => {
+
+
+  save(event) {
+    console.log('event', event);
+    if (event.action === 'create') this.createAddon(event.addon)
+    else if (event.action === 'update') this.updateAddon(event.addon)
+  }
+
+  createAddon(addon) {
+    this.addonService.createNewAddon(addon).then(data => {
       console.log('data', data);
+      this.store.dispatch(createAddon({ addon: addon.data.createAddon }));
     }).catch(error => {
       console.log(error);
     })
   }
 
-  getAddon() {
-    this.addonService.getAddonByID('test').then(apires => {
-      console.log('data', apires);
-      this.addon = apires.data.getAddon;
+  update(addon) {
+    this.selecting = true;
+    console.log('addon', addon);
+    this.addonSelected = addon;
+    console.log('selected', this.addonSelected);
+    setTimeout(() => {
+      this.selecting = false
+    }, 100);
+  }
+
+  updateAddon(addon) {
+    this.addonService.updateAddon(addon).then(data => {
+      console.log('data', data);
+      this.store.dispatch(updateAddon({ addon: addon.data.createAddon }));
     }).catch(error => {
       console.log(error);
     })
   }
 
-  updateAddon() {
-    this.addonService.updateAddon(this.addon).then(data => {
-      console.log('data', data);
-    }).catch(error => {
-      console.log(error);
-    })
+  deleteAddon(addon) {
+
   }
 }
