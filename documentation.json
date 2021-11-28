@@ -1,0 +1,1506 @@
+{
+    "pipes": [],
+    "interfaces": [
+        {
+            "name": "AddonCharacteristics",
+            "id": "interface-AddonCharacteristics-ae0585e142d304f488f53813f54f10eb1e83c6e9239b691f9f16e2f898aedc1e9ebf19aad32b8a588021772d88a4699e7d6ef0140f5798f1dbb8517900af05bb",
+            "file": "src/app/graphql/models.ts",
+            "deprecated": false,
+            "deprecationMessage": "",
+            "type": "interface",
+            "sourceCode": "export interface AddonModel {\r\n    author?: string\r\n    characteristics: AddonCharacteristics[]\r\n    icon: string\r\n    id: string\r\n    name: string\r\n}\r\n\r\nexport interface AddonCharacteristics {\r\n    label: string\r\n    maxLabel?: string\r\n    medLabel?: string\r\n    minLabel?: string\r\n    value: CharacteristicsValue\r\n}\r\n\r\nexport interface CharacteristicsValue {\r\n    max: number\r\n    min: number\r\n}\r\n\r\nexport interface AddonCharacteristicsValueInput {\r\n    max: number\r\n    min: number\r\n}\r\n\r\nexport interface CreateAddonInput {\r\n    author?: string\r\n    characteristics: AddonCharacteristicsInput[]\r\n    icon: string\r\n    name: string\r\n}\r\n\r\nexport interface DeleteAddonInput {\r\n    id: string\r\n}\r\n\r\nexport interface UpdateAddonInput {\r\n    author?: string\r\n    characteristics?: AddonCharacteristicsInput[]\r\n    icon?: string\r\n    id: string\r\n    name?: string\r\n}\r\n\r\nexport interface AddonCharacteristicsInput {\r\n    label?: string\r\n    maxLabel?: string\r\n    medLabel?: string\r\n    minLabel?: string\r\n    value: AddonCharacteristicsValueInput\r\n}\r\n\r\n",
+            "properties": [
+                {
+                    "name": "label",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 10
+                },
+                {
+                    "name": "maxLabel",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": true,
+                    "description": "",
+                    "line": 11
+                },
+                {
+                    "name": "medLabel",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": true,
+                    "description": "",
+                    "line": 12
+                },
+                {
+                    "name": "minLabel",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": true,
+                    "description": "",
+                    "line": 13
+                },
+                {
+                    "name": "value",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "CharacteristicsValue",
+                    "optional": false,
+                    "description": "",
+                    "line": 14
+                }
+            ],
+            "indexSignatures": [],
+            "kind": 165,
+            "methods": []
+        },
+        {
+            "name": "AddonCharacteristicsInput",
+            "id": "interface-AddonCharacteristicsInput-ae0585e142d304f488f53813f54f10eb1e83c6e9239b691f9f16e2f898aedc1e9ebf19aad32b8a588021772d88a4699e7d6ef0140f5798f1dbb8517900af05bb",
+            "file": "src/app/graphql/models.ts",
+            "deprecated": false,
+            "deprecationMessage": "",
+            "type": "interface",
+            "sourceCode": "export interface AddonModel {\r\n    author?: string\r\n    characteristics: AddonCharacteristics[]\r\n    icon: string\r\n    id: string\r\n    name: string\r\n}\r\n\r\nexport interface AddonCharacteristics {\r\n    label: string\r\n    maxLabel?: string\r\n    medLabel?: string\r\n    minLabel?: string\r\n    value: CharacteristicsValue\r\n}\r\n\r\nexport interface CharacteristicsValue {\r\n    max: number\r\n    min: number\r\n}\r\n\r\nexport interface AddonCharacteristicsValueInput {\r\n    max: number\r\n    min: number\r\n}\r\n\r\nexport interface CreateAddonInput {\r\n    author?: string\r\n    characteristics: AddonCharacteristicsInput[]\r\n    icon: string\r\n    name: string\r\n}\r\n\r\nexport interface DeleteAddonInput {\r\n    id: string\r\n}\r\n\r\nexport interface UpdateAddonInput {\r\n    author?: string\r\n    characteristics?: AddonCharacteristicsInput[]\r\n    icon?: string\r\n    id: string\r\n    name?: string\r\n}\r\n\r\nexport interface AddonCharacteristicsInput {\r\n    label?: string\r\n    maxLabel?: string\r\n    medLabel?: string\r\n    minLabel?: string\r\n    value: AddonCharacteristicsValueInput\r\n}\r\n\r\n",
+            "properties": [
+                {
+                    "name": "label",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": true,
+                    "description": "",
+                    "line": 47
+                },
+                {
+                    "name": "maxLabel",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": true,
+                    "description": "",
+                    "line": 48
+                },
+                {
+                    "name": "medLabel",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": true,
+                    "description": "",
+                    "line": 49
+                },
+                {
+                    "name": "minLabel",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": true,
+                    "description": "",
+                    "line": 50
+                },
+                {
+                    "name": "value",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "AddonCharacteristicsValueInput",
+                    "optional": false,
+                    "description": "",
+                    "line": 51
+                }
+            ],
+            "indexSignatures": [],
+            "kind": 165,
+            "methods": []
+        },
+        {
+            "name": "AddonCharacteristicsValueInput",
+            "id": "interface-AddonCharacteristicsValueInput-ae0585e142d304f488f53813f54f10eb1e83c6e9239b691f9f16e2f898aedc1e9ebf19aad32b8a588021772d88a4699e7d6ef0140f5798f1dbb8517900af05bb",
+            "file": "src/app/graphql/models.ts",
+            "deprecated": false,
+            "deprecationMessage": "",
+            "type": "interface",
+            "sourceCode": "export interface AddonModel {\r\n    author?: string\r\n    characteristics: AddonCharacteristics[]\r\n    icon: string\r\n    id: string\r\n    name: string\r\n}\r\n\r\nexport interface AddonCharacteristics {\r\n    label: string\r\n    maxLabel?: string\r\n    medLabel?: string\r\n    minLabel?: string\r\n    value: CharacteristicsValue\r\n}\r\n\r\nexport interface CharacteristicsValue {\r\n    max: number\r\n    min: number\r\n}\r\n\r\nexport interface AddonCharacteristicsValueInput {\r\n    max: number\r\n    min: number\r\n}\r\n\r\nexport interface CreateAddonInput {\r\n    author?: string\r\n    characteristics: AddonCharacteristicsInput[]\r\n    icon: string\r\n    name: string\r\n}\r\n\r\nexport interface DeleteAddonInput {\r\n    id: string\r\n}\r\n\r\nexport interface UpdateAddonInput {\r\n    author?: string\r\n    characteristics?: AddonCharacteristicsInput[]\r\n    icon?: string\r\n    id: string\r\n    name?: string\r\n}\r\n\r\nexport interface AddonCharacteristicsInput {\r\n    label?: string\r\n    maxLabel?: string\r\n    medLabel?: string\r\n    minLabel?: string\r\n    value: AddonCharacteristicsValueInput\r\n}\r\n\r\n",
+            "properties": [
+                {
+                    "name": "max",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "number",
+                    "optional": false,
+                    "description": "",
+                    "line": 23
+                },
+                {
+                    "name": "min",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "number",
+                    "optional": false,
+                    "description": "",
+                    "line": 24
+                }
+            ],
+            "indexSignatures": [],
+            "kind": 165,
+            "methods": []
+        },
+        {
+            "name": "AddonModel",
+            "id": "interface-AddonModel-ae0585e142d304f488f53813f54f10eb1e83c6e9239b691f9f16e2f898aedc1e9ebf19aad32b8a588021772d88a4699e7d6ef0140f5798f1dbb8517900af05bb",
+            "file": "src/app/graphql/models.ts",
+            "deprecated": false,
+            "deprecationMessage": "",
+            "type": "interface",
+            "sourceCode": "export interface AddonModel {\r\n    author?: string\r\n    characteristics: AddonCharacteristics[]\r\n    icon: string\r\n    id: string\r\n    name: string\r\n}\r\n\r\nexport interface AddonCharacteristics {\r\n    label: string\r\n    maxLabel?: string\r\n    medLabel?: string\r\n    minLabel?: string\r\n    value: CharacteristicsValue\r\n}\r\n\r\nexport interface CharacteristicsValue {\r\n    max: number\r\n    min: number\r\n}\r\n\r\nexport interface AddonCharacteristicsValueInput {\r\n    max: number\r\n    min: number\r\n}\r\n\r\nexport interface CreateAddonInput {\r\n    author?: string\r\n    characteristics: AddonCharacteristicsInput[]\r\n    icon: string\r\n    name: string\r\n}\r\n\r\nexport interface DeleteAddonInput {\r\n    id: string\r\n}\r\n\r\nexport interface UpdateAddonInput {\r\n    author?: string\r\n    characteristics?: AddonCharacteristicsInput[]\r\n    icon?: string\r\n    id: string\r\n    name?: string\r\n}\r\n\r\nexport interface AddonCharacteristicsInput {\r\n    label?: string\r\n    maxLabel?: string\r\n    medLabel?: string\r\n    minLabel?: string\r\n    value: AddonCharacteristicsValueInput\r\n}\r\n\r\n",
+            "properties": [
+                {
+                    "name": "author",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": true,
+                    "description": "",
+                    "line": 2
+                },
+                {
+                    "name": "characteristics",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "AddonCharacteristics[]",
+                    "optional": false,
+                    "description": "",
+                    "line": 3
+                },
+                {
+                    "name": "icon",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 4
+                },
+                {
+                    "name": "id",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 5
+                },
+                {
+                    "name": "name",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 6
+                }
+            ],
+            "indexSignatures": [],
+            "kind": 165,
+            "methods": []
+        },
+        {
+            "name": "CharacteristicsValue",
+            "id": "interface-CharacteristicsValue-ae0585e142d304f488f53813f54f10eb1e83c6e9239b691f9f16e2f898aedc1e9ebf19aad32b8a588021772d88a4699e7d6ef0140f5798f1dbb8517900af05bb",
+            "file": "src/app/graphql/models.ts",
+            "deprecated": false,
+            "deprecationMessage": "",
+            "type": "interface",
+            "sourceCode": "export interface AddonModel {\r\n    author?: string\r\n    characteristics: AddonCharacteristics[]\r\n    icon: string\r\n    id: string\r\n    name: string\r\n}\r\n\r\nexport interface AddonCharacteristics {\r\n    label: string\r\n    maxLabel?: string\r\n    medLabel?: string\r\n    minLabel?: string\r\n    value: CharacteristicsValue\r\n}\r\n\r\nexport interface CharacteristicsValue {\r\n    max: number\r\n    min: number\r\n}\r\n\r\nexport interface AddonCharacteristicsValueInput {\r\n    max: number\r\n    min: number\r\n}\r\n\r\nexport interface CreateAddonInput {\r\n    author?: string\r\n    characteristics: AddonCharacteristicsInput[]\r\n    icon: string\r\n    name: string\r\n}\r\n\r\nexport interface DeleteAddonInput {\r\n    id: string\r\n}\r\n\r\nexport interface UpdateAddonInput {\r\n    author?: string\r\n    characteristics?: AddonCharacteristicsInput[]\r\n    icon?: string\r\n    id: string\r\n    name?: string\r\n}\r\n\r\nexport interface AddonCharacteristicsInput {\r\n    label?: string\r\n    maxLabel?: string\r\n    medLabel?: string\r\n    minLabel?: string\r\n    value: AddonCharacteristicsValueInput\r\n}\r\n\r\n",
+            "properties": [
+                {
+                    "name": "max",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "number",
+                    "optional": false,
+                    "description": "",
+                    "line": 18
+                },
+                {
+                    "name": "min",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "number",
+                    "optional": false,
+                    "description": "",
+                    "line": 19
+                }
+            ],
+            "indexSignatures": [],
+            "kind": 165,
+            "methods": []
+        },
+        {
+            "name": "CreateAddonInput",
+            "id": "interface-CreateAddonInput-ae0585e142d304f488f53813f54f10eb1e83c6e9239b691f9f16e2f898aedc1e9ebf19aad32b8a588021772d88a4699e7d6ef0140f5798f1dbb8517900af05bb",
+            "file": "src/app/graphql/models.ts",
+            "deprecated": false,
+            "deprecationMessage": "",
+            "type": "interface",
+            "sourceCode": "export interface AddonModel {\r\n    author?: string\r\n    characteristics: AddonCharacteristics[]\r\n    icon: string\r\n    id: string\r\n    name: string\r\n}\r\n\r\nexport interface AddonCharacteristics {\r\n    label: string\r\n    maxLabel?: string\r\n    medLabel?: string\r\n    minLabel?: string\r\n    value: CharacteristicsValue\r\n}\r\n\r\nexport interface CharacteristicsValue {\r\n    max: number\r\n    min: number\r\n}\r\n\r\nexport interface AddonCharacteristicsValueInput {\r\n    max: number\r\n    min: number\r\n}\r\n\r\nexport interface CreateAddonInput {\r\n    author?: string\r\n    characteristics: AddonCharacteristicsInput[]\r\n    icon: string\r\n    name: string\r\n}\r\n\r\nexport interface DeleteAddonInput {\r\n    id: string\r\n}\r\n\r\nexport interface UpdateAddonInput {\r\n    author?: string\r\n    characteristics?: AddonCharacteristicsInput[]\r\n    icon?: string\r\n    id: string\r\n    name?: string\r\n}\r\n\r\nexport interface AddonCharacteristicsInput {\r\n    label?: string\r\n    maxLabel?: string\r\n    medLabel?: string\r\n    minLabel?: string\r\n    value: AddonCharacteristicsValueInput\r\n}\r\n\r\n",
+            "properties": [
+                {
+                    "name": "author",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": true,
+                    "description": "",
+                    "line": 28
+                },
+                {
+                    "name": "characteristics",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "AddonCharacteristicsInput[]",
+                    "optional": false,
+                    "description": "",
+                    "line": 29
+                },
+                {
+                    "name": "icon",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 30
+                },
+                {
+                    "name": "name",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 31
+                }
+            ],
+            "indexSignatures": [],
+            "kind": 165,
+            "methods": []
+        },
+        {
+            "name": "DeleteAddonInput",
+            "id": "interface-DeleteAddonInput-ae0585e142d304f488f53813f54f10eb1e83c6e9239b691f9f16e2f898aedc1e9ebf19aad32b8a588021772d88a4699e7d6ef0140f5798f1dbb8517900af05bb",
+            "file": "src/app/graphql/models.ts",
+            "deprecated": false,
+            "deprecationMessage": "",
+            "type": "interface",
+            "sourceCode": "export interface AddonModel {\r\n    author?: string\r\n    characteristics: AddonCharacteristics[]\r\n    icon: string\r\n    id: string\r\n    name: string\r\n}\r\n\r\nexport interface AddonCharacteristics {\r\n    label: string\r\n    maxLabel?: string\r\n    medLabel?: string\r\n    minLabel?: string\r\n    value: CharacteristicsValue\r\n}\r\n\r\nexport interface CharacteristicsValue {\r\n    max: number\r\n    min: number\r\n}\r\n\r\nexport interface AddonCharacteristicsValueInput {\r\n    max: number\r\n    min: number\r\n}\r\n\r\nexport interface CreateAddonInput {\r\n    author?: string\r\n    characteristics: AddonCharacteristicsInput[]\r\n    icon: string\r\n    name: string\r\n}\r\n\r\nexport interface DeleteAddonInput {\r\n    id: string\r\n}\r\n\r\nexport interface UpdateAddonInput {\r\n    author?: string\r\n    characteristics?: AddonCharacteristicsInput[]\r\n    icon?: string\r\n    id: string\r\n    name?: string\r\n}\r\n\r\nexport interface AddonCharacteristicsInput {\r\n    label?: string\r\n    maxLabel?: string\r\n    medLabel?: string\r\n    minLabel?: string\r\n    value: AddonCharacteristicsValueInput\r\n}\r\n\r\n",
+            "properties": [
+                {
+                    "name": "id",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 35
+                }
+            ],
+            "indexSignatures": [],
+            "kind": 165,
+            "methods": []
+        },
+        {
+            "name": "UpdateAddonInput",
+            "id": "interface-UpdateAddonInput-ae0585e142d304f488f53813f54f10eb1e83c6e9239b691f9f16e2f898aedc1e9ebf19aad32b8a588021772d88a4699e7d6ef0140f5798f1dbb8517900af05bb",
+            "file": "src/app/graphql/models.ts",
+            "deprecated": false,
+            "deprecationMessage": "",
+            "type": "interface",
+            "sourceCode": "export interface AddonModel {\r\n    author?: string\r\n    characteristics: AddonCharacteristics[]\r\n    icon: string\r\n    id: string\r\n    name: string\r\n}\r\n\r\nexport interface AddonCharacteristics {\r\n    label: string\r\n    maxLabel?: string\r\n    medLabel?: string\r\n    minLabel?: string\r\n    value: CharacteristicsValue\r\n}\r\n\r\nexport interface CharacteristicsValue {\r\n    max: number\r\n    min: number\r\n}\r\n\r\nexport interface AddonCharacteristicsValueInput {\r\n    max: number\r\n    min: number\r\n}\r\n\r\nexport interface CreateAddonInput {\r\n    author?: string\r\n    characteristics: AddonCharacteristicsInput[]\r\n    icon: string\r\n    name: string\r\n}\r\n\r\nexport interface DeleteAddonInput {\r\n    id: string\r\n}\r\n\r\nexport interface UpdateAddonInput {\r\n    author?: string\r\n    characteristics?: AddonCharacteristicsInput[]\r\n    icon?: string\r\n    id: string\r\n    name?: string\r\n}\r\n\r\nexport interface AddonCharacteristicsInput {\r\n    label?: string\r\n    maxLabel?: string\r\n    medLabel?: string\r\n    minLabel?: string\r\n    value: AddonCharacteristicsValueInput\r\n}\r\n\r\n",
+            "properties": [
+                {
+                    "name": "author",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": true,
+                    "description": "",
+                    "line": 39
+                },
+                {
+                    "name": "characteristics",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "AddonCharacteristicsInput[]",
+                    "optional": true,
+                    "description": "",
+                    "line": 40
+                },
+                {
+                    "name": "icon",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": true,
+                    "description": "",
+                    "line": 41
+                },
+                {
+                    "name": "id",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 42
+                },
+                {
+                    "name": "name",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": true,
+                    "description": "",
+                    "line": 43
+                }
+            ],
+            "indexSignatures": [],
+            "kind": 165,
+            "methods": []
+        }
+    ],
+    "injectables": [
+        {
+            "name": "AddonService",
+            "id": "injectable-AddonService-7fc4526144954c3e1331979ee3958f2d13ca8ce13022bf75a4dda8ed81ff113ed91345c4f5a6713d78edc5f101ca7af5d6dee88738f45aa429fd9e0b2f6a9f64",
+            "file": "src/app/services/addon.service.ts",
+            "properties": [],
+            "methods": [
+                {
+                    "name": "createNewAddon",
+                    "args": [
+                        {
+                            "name": "addon",
+                            "type": "CreateAddonInput",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "any",
+                    "typeParameters": [],
+                    "line": 14,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "jsdoctags": [
+                        {
+                            "name": "addon",
+                            "type": "CreateAddonInput",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "getAddonByID",
+                    "args": [
+                        {
+                            "name": "id",
+                            "type": "string",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "any",
+                    "typeParameters": [],
+                    "line": 18,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "jsdoctags": [
+                        {
+                            "name": "id",
+                            "type": "string",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "updateAddon",
+                    "args": [
+                        {
+                            "name": "addon",
+                            "type": "UpdateAddonInput",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "any",
+                    "typeParameters": [],
+                    "line": 22,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "jsdoctags": [
+                        {
+                            "name": "addon",
+                            "type": "UpdateAddonInput",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                }
+            ],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "description": "",
+            "rawdescription": "\n",
+            "sourceCode": "import { Injectable } from '@angular/core';\nimport { API, graphqlOperation } from '@aws-amplify/api';\nimport * as mutations from '../graphql/mutations/addon.mutation'\nimport { CreateAddonInput, UpdateAddonInput } from '../graphql/models'\nimport * as queries from '../graphql/queries/addon.queries'\n\n@Injectable({\n  providedIn: 'root'\n})\nexport class AddonService {\n\n  constructor() { }\n\n  createNewAddon(addon: CreateAddonInput): any {\n    return API.graphql(graphqlOperation(mutations.createAddon, { addon: addon }));\n  }\n\n  getAddonByID(id: string): any {\n    return API.graphql(graphqlOperation(queries.getAddonByID))\n  }\n\n  updateAddon(addon: UpdateAddonInput): any {\n    return API.graphql(graphqlOperation(mutations.updateAddon, { addon: addon }))\n  }\n}\n",
+            "constructorObj": {
+                "name": "constructor",
+                "description": "",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "args": [],
+                "line": 10
+            },
+            "type": "injectable"
+        }
+    ],
+    "guards": [],
+    "interceptors": [],
+    "classes": [
+        {
+            "name": "AppPage",
+            "id": "class-AppPage-216456583e25428faed77a4328eb6552448b3ca5a60c594cca6093d48f5332766845debfe0c05c76cc89e95f1f958caf3ad9253a229c2cc3a570b8ec03f2b4c7",
+            "file": "e2e/src/app.po.ts",
+            "deprecated": false,
+            "deprecationMessage": "",
+            "type": "class",
+            "sourceCode": "import { browser, by, element } from 'protractor';\n\nexport class AppPage {\n  navigateTo(): Promise<unknown> {\n    return browser.get(browser.baseUrl) as Promise<unknown>;\n  }\n\n  getTitleText(): Promise<string> {\n    return element(by.css('app-root .content span')).getText() as Promise<string>;\n  }\n}\n",
+            "properties": [],
+            "methods": [
+                {
+                    "name": "getTitleText",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "Promise<string>",
+                    "typeParameters": [],
+                    "line": 8,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                },
+                {
+                    "name": "navigateTo",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "Promise<>",
+                    "typeParameters": [],
+                    "line": 4,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                }
+            ],
+            "indexSignatures": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "hostBindings": [],
+            "hostListeners": []
+        }
+    ],
+    "directives": [],
+    "components": [
+        {
+            "name": "AddonComponent",
+            "id": "component-AddonComponent-c038a2c9de26984d2835b5acfae6aed7663cde9efe3c04afa037bbfca8b8cc4f3dfd19b329e750d5204552683452155b2b9cfec57e0f448851998dc588e624ef",
+            "file": "src/app/component/addon/addon.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-addon",
+            "styleUrls": [
+                "./addon.component.scss"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./addon.component.html"
+            ],
+            "viewProviders": [],
+            "inputsClass": [
+                {
+                    "name": "addon",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 12,
+                    "type": "AddonModel",
+                    "decorators": []
+                }
+            ],
+            "outputsClass": [],
+            "propertiesClass": [
+                {
+                    "name": "displayValOne",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "any",
+                    "optional": false,
+                    "description": "",
+                    "line": 15
+                },
+                {
+                    "name": "displayValTwo",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "any",
+                    "optional": false,
+                    "description": "",
+                    "line": 16
+                },
+                {
+                    "name": "minGap",
+                    "defaultValue": "0",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "number",
+                    "optional": false,
+                    "description": "",
+                    "line": 17
+                },
+                {
+                    "name": "sliderMaxValue",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "any",
+                    "optional": false,
+                    "description": "",
+                    "line": 19
+                },
+                {
+                    "name": "sliderOne",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "any",
+                    "optional": false,
+                    "description": "",
+                    "line": 13
+                },
+                {
+                    "name": "sliderTrack",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "any",
+                    "optional": false,
+                    "description": "",
+                    "line": 18
+                },
+                {
+                    "name": "sliderTwo",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "any",
+                    "optional": false,
+                    "description": "",
+                    "line": 14
+                },
+                {
+                    "name": "thumb",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "any",
+                    "optional": false,
+                    "description": "",
+                    "line": 20
+                }
+            ],
+            "methodsClass": [
+                {
+                    "name": "fillColor",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 53,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                },
+                {
+                    "name": "ngAfterViewInit",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 35,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                },
+                {
+                    "name": "ngOnInit",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 23,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                },
+                {
+                    "name": "slideOne",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 41,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                },
+                {
+                    "name": "slideTwo",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 47,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                }
+            ],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { AfterViewInit, Component, Input, OnInit } from '@angular/core';\nimport { AddonModel } from '../../graphql/models';\n\n@Component({\n  selector: 'app-addon',\n  templateUrl: './addon.component.html',\n  styleUrls: ['./addon.component.scss']\n})\nexport class AddonComponent implements OnInit, AfterViewInit {\n\n\n  @Input('addon') addon: AddonModel;\n  sliderOne: any;\n  sliderTwo: any;\n  displayValOne: any\n  displayValTwo: any\n  minGap = 0;\n  sliderTrack: any\n  sliderMaxValue: any;\n  thumb: any\n  constructor() { }\n\n  ngOnInit(): void {\n\n    this.sliderOne = document.getElementById(\"slider-1\");\n    this.sliderTwo = document.getElementById(\"slider-2\");;\n    this.sliderTrack = document.querySelector(\".slider-track\");\n    this.sliderMaxValue = this.addon.characteristics[0].value.max;\n\n\n  }\n\n\n\n  ngAfterViewInit() {\n\n    this.slideOne();\n    this.slideTwo();\n\n  }\n  slideOne() {\n    if (parseInt(this.sliderTwo.value) - parseInt(this.sliderOne.value) <= this.minGap) {\n      this.sliderOne.value = parseInt(this.sliderTwo.value) - this.minGap;\n    }\n    this.fillColor();\n  }\n  slideTwo() {\n    if (parseInt(this.sliderTwo.value) - parseInt(this.sliderOne.value) <= this.minGap) {\n      this.sliderTwo.value = parseInt(this.sliderOne.value) + this.minGap;\n    }\n    this.fillColor();\n  }\n  fillColor() {\n    const percent1 = (this.sliderOne.value / this.sliderMaxValue) * 100;\n    const percent2 = (this.sliderTwo.value / this.sliderMaxValue) * 100;\n    this.sliderTrack.style.background = `linear-gradient(90deg, #eeeeee ${percent1}% ,rgba(92, 184, 92, 0.1) ${percent1}% ,#5CB85C 50%, rgba(92, 184, 92, 0.1) ${percent2}%, #eeeeee ${percent2}%)`;\n  }\n\n}\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": "@import \"../../../assets/styles/variables.scss\";\r\n\r\n.addon {\r\n    display: flex;\r\n    gap: 1rem;\r\n    justify-content: flex-start;\r\n    align-items: flex-start;\r\n    padding: 10px;\r\n\r\n    &__icon {\r\n        width: 20px;\r\n        height: 20px;\r\n    }\r\n\r\n    &__labels {\r\n        display: flex;\r\n        justify-content: space-between;\r\n        width: 100%;\r\n        font-size: 14px;\r\n        line-height: 20px;\r\n        color: $color-text-label;\r\n        position: absolute;\r\n        bottom: 20px;\r\n    }\r\n}\r\n\r\n.name {\r\n    font-weight: 400;\r\n    font-size: 16px;\r\n    line-height: 24px;\r\n    color: $color-text-title;\r\n}\r\n.container {\r\n    position: relative;\r\n    width: 395px;\r\n    height: 100px;\r\n    display: flex;\r\n    flex-direction: column;\r\n}\r\ninput[type=\"range\"] {\r\n    -webkit-appearance: none;\r\n    -moz-appearance: none;\r\n    appearance: none;\r\n    width: 100%;\r\n    outline: none;\r\n    position: absolute;\r\n    margin: auto;\r\n    top: 0;\r\n    bottom: 0;\r\n    background-color: transparent;\r\n    pointer-events: none;\r\n}\r\n.slider-track {\r\n    width: 100%;\r\n    height: 5px;\r\n    position: absolute;\r\n    margin: auto;\r\n    top: 0;\r\n    bottom: 0;\r\n    border-radius: 5px;\r\n}\r\ninput[type=\"range\"]::-webkit-slider-runnable-track {\r\n    -webkit-appearance: none;\r\n    height: 5px;\r\n}\r\ninput[type=\"range\"]::-moz-range-track {\r\n    -moz-appearance: none;\r\n    height: 5px;\r\n}\r\ninput[type=\"range\"]::-ms-track {\r\n    appearance: none;\r\n    height: 5px;\r\n}\r\ninput[type=\"range\"]::-webkit-slider-thumb {\r\n    -webkit-appearance: none;\r\n    height: 17.5px;\r\n    width: 16px;\r\n    background-image: url(\"../../../assets/icons/pointer.svg\");\r\n    background-repeat: no-repeat;\r\n    cursor: pointer;\r\n    margin-top: -20px;\r\n    pointer-events: auto;\r\n}\r\ninput[type=\"range\"]::-moz-range-thumb {\r\n    -webkit-appearance: none;\r\n    height: 17.5px;\r\n    width: 16px;\r\n    background-image: url(\"../../../assets/icons/pointer.svg\");\r\n    background-repeat: no-repeat;\r\n    cursor: pointer;\r\n    margin-top: -20px;\r\n    pointer-events: auto;\r\n}\r\ninput[type=\"range\"]::-ms-thumb {\r\n    appearance: none;\r\n    height: 17.5px;\r\n    width: 16px;\r\n    background-image: url(\"../../../assets/icons/pointer.svg\");\r\n    background-repeat: no-repeat;\r\n    cursor: pointer;\r\n    margin-top: -20px;\r\n    pointer-events: auto;\r\n}\r\n",
+                    "styleUrl": "./addon.component.scss"
+                }
+            ],
+            "stylesData": "",
+            "constructorObj": {
+                "name": "constructor",
+                "description": "",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "args": [],
+                "line": 20
+            },
+            "implements": [
+                "OnInit",
+                "AfterViewInit"
+            ],
+            "templateData": "<div class='addon'>\n    <img class='addon__icon' src=\"../assets/icons/{{addon.icon}}.svg\" alt=\"icon\">\n    <div class=\"container\">\n        <div class=\"name\">{{addon.characteristics[0].label | titlecase}}</div>\n        <div class=\"slider-track\"></div>\n        <input type=\"range\" [min]=\"addon.characteristics[0].value.min\" [max]=\"addon.characteristics[0].value.max\"\n            [value]=\"addon.characteristics[1] ? addon.characteristics[1].value.min: addon.characteristics[0].value.min \"\n            id=\"slider-1\" (input)=\"slideOne()\">\n        <input type=\"range\" [min]=\"addon.characteristics[0].value.min\" [max]=\"addon.characteristics[0].value.max\"\n            [value]=\"addon.characteristics[1] ? addon.characteristics[1].value.max: addon.characteristics[0].value.max\"\n            id=\"slider-2\" (input)=\"slideTwo()\">\n        <div class='addon__labels'>\n            <span>{{addon.characteristics[0].minLabel}}</span>\n            <span>{{addon.characteristics[0].medLabel}}</span>\n            <span>{{addon.characteristics[0].maxLabel}}</span>\n        </div>\n    </div>\n</div>"
+        },
+        {
+            "name": "AppComponent",
+            "id": "component-AppComponent-fcf4a61fbe1d5db1937069cca42a85bbde9542666cf91d312475ea0e8f47224070e7e4cc2d96aedd5affea5754f3f9f60c0deeebd55f28742e64109b27e016d3",
+            "file": "src/app/app.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-root",
+            "styleUrls": [
+                "./app.component.scss"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./app.component.html"
+            ],
+            "viewProviders": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [
+                {
+                    "name": "addon",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "AddonModel",
+                    "optional": false,
+                    "description": "",
+                    "line": 12
+                },
+                {
+                    "name": "title",
+                    "defaultValue": "'Addon'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 11
+                }
+            ],
+            "methodsClass": [
+                {
+                    "name": "getAddon",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 66,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                },
+                {
+                    "name": "saveAddon",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 42,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                },
+                {
+                    "name": "updateAddon",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 75,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                }
+            ],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component } from '@angular/core';\nimport { AddonModel, CreateAddonInput } from './graphql/models';\nimport { AddonService } from './services/addon.service';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.scss']\n})\nexport class AppComponent {\n  title = 'Addon';\n  addon: AddonModel;\n  constructor(private addonService: AddonService) {\n    this.addon = {\n      characteristics: [{\n        label: 'angle',\n        maxLabel: 'directly above',\n        medLabel: '',\n        minLabel: 'Front on',\n        value: {\n          max: 100,\n          min: 0\n        }\n      },\n      {\n        label: 'angle',\n        maxLabel: 'directly above',\n        medLabel: '',\n        minLabel: 'Front on',\n        value: {\n          max: 80,\n          min: 20\n        }\n      }],\n      name: 'Addon ABCD',\n      author: 'Josue Pacheco',\n      icon: 'angle',\n      id: 'adsf'\n    }\n  }\n\n  saveAddon() {\n\n    const newAddon: CreateAddonInput = {\n      characteristics: [{\n        label: 'angle',\n        maxLabel: 'directly above',\n        medLabel: '',\n        minLabel: 'Front on',\n        value: {\n          max: 100,\n          min: 0\n        }\n      }],\n      name: 'Addon ABCD',\n      author: 'Josue Pacheco',\n      icon: 'angle'\n    }\n    this.addonService.createNewAddon(newAddon).then(data => {\n      console.log('data', data);\n    }).catch(error => {\n      console.log(error);\n    })\n  }\n\n  getAddon() {\n    this.addonService.getAddonByID('test').then(apires => {\n      console.log('data', apires);\n      this.addon = apires.data.getAddon;\n    }).catch(error => {\n      console.log(error);\n    })\n  }\n\n  updateAddon() {\n    this.addonService.updateAddon(this.addon).then(data => {\n      console.log('data', data);\n    }).catch(error => {\n      console.log(error);\n    })\n  }\n}\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": "",
+                    "styleUrl": "./app.component.scss"
+                }
+            ],
+            "stylesData": "",
+            "constructorObj": {
+                "name": "constructor",
+                "description": "",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "args": [
+                    {
+                        "name": "addonService",
+                        "type": "AddonService",
+                        "deprecated": false,
+                        "deprecationMessage": ""
+                    }
+                ],
+                "line": 12,
+                "jsdoctags": [
+                    {
+                        "name": "addonService",
+                        "type": "AddonService",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "tagName": {
+                            "text": "param"
+                        }
+                    }
+                ]
+            },
+            "templateData": "<app-addon [addon]='addon'></app-addon>"
+        },
+        {
+            "name": "FormComponent",
+            "id": "component-FormComponent-635b69969b38290110df05b5288f1fe9eef017fab406bbb10f580c1b02cf71a3b69de34ed6a7c0d8c89ab4920c8ba132fb295aae9f4f8bcba6f1ad704c675062",
+            "file": "src/app/component/form/form.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-form",
+            "styleUrls": [
+                "./form.component.scss"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./form.component.html"
+            ],
+            "viewProviders": [],
+            "inputsClass": [
+                {
+                    "name": "addon",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 15,
+                    "type": "any",
+                    "decorators": []
+                }
+            ],
+            "outputsClass": [
+                {
+                    "name": "onSave",
+                    "defaultValue": "new EventEmitter<any>()",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 16,
+                    "type": "EventEmitter"
+                }
+            ],
+            "propertiesClass": [
+                {
+                    "name": "error",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 13
+                },
+                {
+                    "name": "form",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "FormGroup",
+                    "optional": false,
+                    "description": "",
+                    "line": 12
+                }
+            ],
+            "methodsClass": [
+                {
+                    "name": "ngOnInit",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 20,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                },
+                {
+                    "name": "save",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 50,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                }
+            ],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';\nimport { FormControl, FormGroup, Validators } from '@angular/forms';\nimport { AddonModel } from 'src/app/graphql/models';\n\n@Component({\n  selector: 'app-form',\n  templateUrl: './form.component.html',\n  styleUrls: ['./form.component.scss']\n})\nexport class FormComponent implements OnInit {\n\n  form: FormGroup;\n  error: string;\n\n  @Input('addon') addon: any;\n  @Output('onSave') onSave = new EventEmitter<any>();\n  constructor() { }\n\n\n  ngOnInit(): void {\n    if (this.addon.id) {\n      this.form = new FormGroup({\n        id: new FormControl(this.addon.id),\n        name: new FormControl(this.addon.name, [Validators.required]),\n        author: new FormControl(this.addon.author),\n        icon: new FormControl(this.addon.icon, [Validators.required]),\n        label: new FormControl(this.addon.characteristics[0].label, [Validators.required]),\n        maxLabel: new FormControl(this.addon.characteristics[0].maxLabel),\n        medLabel: new FormControl(this.addon.characteristics[0].medLabel),\n        minLabel: new FormControl(this.addon.characteristics[0].minLabel),\n        max: new FormControl(this.addon.characteristics[0].value.max, [Validators.required]),\n        min: new FormControl(this.addon.characteristics[0].value.min, [Validators.required])\n      })\n    } else {\n      this.form = new FormGroup({\n        id: new FormControl(),\n        name: new FormControl('', [Validators.required]),\n        author: new FormControl(),\n        icon: new FormControl('angle', [Validators.required]),\n        label: new FormControl('', [Validators.required]),\n        maxLabel: new FormControl(''),\n        medLabel: new FormControl(''),\n        minLabel: new FormControl(''),\n        max: new FormControl(100, [Validators.required]),\n        min: new FormControl(0, [Validators.required])\n      })\n    }\n  }\n\n  save() {\n    if (this.form.invalid) {\n      this.error = `please fill all required fields`\n      return;\n    }\n\n\n\n\n  }\n\n}\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": "@import \"../../../assets/styles/variables.scss\";\r\n\r\n.form {\r\n    padding: 1rem;\r\n    display: flex;\r\n    flex-direction: column;\r\n    gap: 1rem;\r\n    justify-content: flex-start;\r\n    align-items: flex-start;\r\n    width: 300px;\r\n    box-shadow: 8px 7px 15px 0px rgba(0, 0, 0, 0.4);\r\n\r\n    .error {\r\n        color: $color-text-error;\r\n    }\r\n    .field {\r\n        display: flex;\r\n        gap: 1rem;\r\n\r\n        label {\r\n            width: 100px;\r\n        }\r\n\r\n        input {\r\n            border: none;\r\n            box-shadow: 8px 7px 15px 0px rgba(0, 0, 0, 0.2);\r\n            &:focus-visible {\r\n                border: none;\r\n                outline: none;\r\n                box-shadow: 8px 7px 15px 0px rgba(0, 0, 0, 0.4);\r\n            }\r\n        }\r\n    }\r\n\r\n    button {\r\n        align-self: center;\r\n        width: 60px;\r\n        border: none;\r\n        background-color: lightseagreen;\r\n        padding: 0.5rem;\r\n        color: white;\r\n        border-radius: 15px;\r\n        cursor: pointer;\r\n    }\r\n}\r\n",
+                    "styleUrl": "./form.component.scss"
+                }
+            ],
+            "stylesData": "",
+            "constructorObj": {
+                "name": "constructor",
+                "description": "",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "args": [],
+                "line": 16
+            },
+            "implements": [
+                "OnInit"
+            ],
+            "templateData": "<form class='form' [formGroup]=\"form\">\n    <div class='error' *ngIf='error'>Error: {{error}}</div>\n    <div class='field'>\n        <label>Name*:</label>\n        <input required formControlName='name'>\n    </div>\n    <div class='field'>\n        <label>Author:</label>\n        <input formControlName='author'>\n    </div>\n    <div class='field'>\n        <label>Icon*:</label>\n        <select required formControlName='icon'>\n            <option value='angle'>Angle</option>\n            <option value='distance'>Distance</option>\n            <option value='lighting'>Lighting</option>\n            <option value='visibility'>Visibility</option>\n        </select>\n    </div>\n    <div class='field'>\n        <label>Label*:</label>\n        <input required formControlName='label'>\n    </div>\n    <div class='field'>\n        <label>Max Label:</label>\n        <input formControlName='maxLabel'>\n    </div>\n    <div class='field'>\n        <label>Med Label:</label>\n        <input formControlName='medLabel'>\n    </div>\n    <div class='field'>\n        <label>Min Label:</label>\n        <input formControlName='minLabel'>\n    </div>\n    <div class='field'>\n        <label>Max Value*:</label>\n        <input formControlName='max'>\n    </div>\n    <div class='field'>\n        <label>Min Value*:</label>\n        <input formControlName='min'>\n    </div>\n\n    <button (click)='save()'>Save</button>\n</form>"
+        }
+    ],
+    "modules": [
+        {
+            "name": "AppModule",
+            "id": "module-AppModule-ede5a3392f683fb5cd0f9d902017684d34ea3977816a9eeec0af9dfa9980498df0c03cfed3e33ee330e736b066c1c1b1b7b55e129c0f44b4b0dce058dff1def0",
+            "description": "",
+            "deprecationMessage": "",
+            "deprecated": false,
+            "file": "src/app/app.module.ts",
+            "methods": [],
+            "sourceCode": "import { BrowserModule } from '@angular/platform-browser';\nimport { NgModule } from '@angular/core';\n\nimport { AppComponent } from './app.component';\nimport { AddonService } from './services/addon.service';\nimport { AddonComponent } from './component/addon/addon.component';\nimport { FormComponent } from './component/form/form.component'\nimport { FormsModule, ReactiveFormsModule } from '@angular/forms';\n\n@NgModule({\n  declarations: [\n    AppComponent,\n    AddonComponent,\n    FormComponent\n  ],\n  imports: [\n    BrowserModule,\n    ReactiveFormsModule,\n    FormsModule\n  ],\n  providers: [AddonService],\n  bootstrap: [AppComponent]\n})\nexport class AppModule { }\n",
+            "children": [
+                {
+                    "type": "providers",
+                    "elements": [
+                        {
+                            "name": "AddonService"
+                        }
+                    ]
+                },
+                {
+                    "type": "declarations",
+                    "elements": [
+                        {
+                            "name": "AddonComponent"
+                        },
+                        {
+                            "name": "AppComponent"
+                        },
+                        {
+                            "name": "FormComponent"
+                        }
+                    ]
+                },
+                {
+                    "type": "imports",
+                    "elements": []
+                },
+                {
+                    "type": "exports",
+                    "elements": []
+                },
+                {
+                    "type": "bootstrap",
+                    "elements": [
+                        {
+                            "name": "AppComponent"
+                        }
+                    ]
+                },
+                {
+                    "type": "classes",
+                    "elements": []
+                }
+            ]
+        }
+    ],
+    "miscellaneous": {
+        "variables": [
+            {
+                "name": "angle",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/app/component/addon/addon.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "() => ({\r\n    component: AddonComponent,\r\n    props: {\r\n        addon: {\r\n            author: 'Josue Pacheco',\r\n            characteristics: [{\r\n                label: 'angle',\r\n                maxLabel: 'Directly above',\r\n                medLabel: '',\r\n                minLabel: 'Front on',\r\n                value: {\r\n                    min: 0,\r\n                    max: 100\r\n                }\r\n            }],\r\n            icon: 'angle',\r\n            id: 'adf-asdf-asdf-as',\r\n            name: 'Angle abc'\r\n        }\r\n    },\r\n})"
+            },
+            {
+                "name": "basic",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/app/component/form/form.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "() => ({\r\n    component: FormComponent,\r\n    props: {\r\n        addon: null\r\n    }\r\n})"
+            },
+            {
+                "name": "context",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/test.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "require.context('./', true, /\\.spec\\.ts$/)"
+            },
+            {
+                "name": "createAddon",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/app/graphql/mutations/addon.mutation.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "`\r\nmutation CreateAddon($addon:CreateAddonInput!) {\r\ncreateAddon(input: $addon) {\r\nid\r\nauthor\r\ncharacteristics {\r\nlabel\r\nmaxLabel\r\nmedLabel\r\nminLabel\r\nvalue {\r\nmax\r\nmin\r\n}\r\n}\r\nname\r\nicon\r\n}\r\n}\r\n`"
+            },
+            {
+                "name": "distance",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/app/component/addon/addon.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "() => ({\r\n    component: AddonComponent,\r\n    props: {\r\n        addon: {\r\n            author: 'Josue Pacheco',\r\n            characteristics: [{\r\n                label: 'distance',\r\n                maxLabel: 'Long distance',\r\n                medLabel: 'City block',\r\n                minLabel: 'Face-to-face',\r\n                value: {\r\n                    min: 0,\r\n                    max: 100\r\n                }\r\n            }],\r\n            icon: 'distance',\r\n            id: 'adf-asdf-asdf-as',\r\n            name: 'Distance abc'\r\n        }\r\n    },\r\n})"
+            },
+            {
+                "name": "environment",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/environments/environment.prod.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "object",
+                "defaultValue": "{\n  production: true\n}"
+            },
+            {
+                "name": "environment",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/environments/environment.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "object",
+                "defaultValue": "{\n  production: false\n}"
+            },
+            {
+                "name": "getAddonByID",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/app/graphql/queries/addon.queries.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "`\r\n    query getAddon{\r\n        getAddon(id:\"f9abf63a-3dcc-400a-a445-7be24fa723be\"){\r\n            id\r\n            author\r\n            characteristics {\r\n                label\r\n                maxLabel\r\n                medLabel\r\n                minLabel\r\n                value {\r\n                    max\r\n                    min\r\n                }\r\n            }\r\n            name\r\n            icon\r\n        }\r\n    }\r\n`"
+            },
+            {
+                "name": "lighting",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/app/component/addon/addon.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "() => ({\r\n    component: AddonComponent,\r\n    props: {\r\n        addon: {\r\n            author: 'Josue Pacheco',\r\n            characteristics: [{\r\n                label: 'lighting',\r\n                maxLabel: 'Night',\r\n                medLabel: 'Shadowy',\r\n                minLabel: 'Daytime',\r\n                value: {\r\n                    min: 0,\r\n                    max: 100\r\n                }\r\n            }],\r\n            icon: 'lighting',\r\n            id: 'adf-asdf-asdf-as',\r\n            name: 'lighting abc'\r\n        }\r\n    },\r\n})"
+            },
+            {
+                "name": "require",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/test.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "literal type"
+            },
+            {
+                "name": "updateAddon",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/app/graphql/mutations/addon.mutation.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "`\r\n    mutation updateAddon($addon:UpdateAddonInput!){\r\n        updateAddon(input: $addon) {\r\n            author\r\n            icon\r\n            id\r\n            name\r\n            characteristics {\r\n                value {\r\n                    max\r\n                    min\r\n            }\r\n        }\r\n    }\r\n}\r\n\r\n`"
+            },
+            {
+                "name": "visibility",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/app/component/addon/addon.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "() => ({\r\n    component: AddonComponent,\r\n    props: {\r\n        addon: {\r\n            author: 'Josue Pacheco',\r\n            characteristics: [{\r\n                label: 'visibility',\r\n                maxLabel: 'Crowded',\r\n                medLabel: 'Some groups',\r\n                minLabel: 'Clear scene',\r\n                value: {\r\n                    min: 0,\r\n                    max: 100\r\n                }\r\n            }],\r\n            icon: 'visibility',\r\n            id: 'adf-asdf-asdf-as',\r\n            name: 'visibility abc'\r\n        }\r\n    },\r\n})"
+            }
+        ],
+        "functions": [],
+        "typealiases": [],
+        "enumerations": [],
+        "groupedVariables": {
+            "src/app/component/addon/addon.stories.ts": [
+                {
+                    "name": "angle",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/component/addon/addon.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "() => ({\r\n    component: AddonComponent,\r\n    props: {\r\n        addon: {\r\n            author: 'Josue Pacheco',\r\n            characteristics: [{\r\n                label: 'angle',\r\n                maxLabel: 'Directly above',\r\n                medLabel: '',\r\n                minLabel: 'Front on',\r\n                value: {\r\n                    min: 0,\r\n                    max: 100\r\n                }\r\n            }],\r\n            icon: 'angle',\r\n            id: 'adf-asdf-asdf-as',\r\n            name: 'Angle abc'\r\n        }\r\n    },\r\n})"
+                },
+                {
+                    "name": "distance",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/component/addon/addon.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "() => ({\r\n    component: AddonComponent,\r\n    props: {\r\n        addon: {\r\n            author: 'Josue Pacheco',\r\n            characteristics: [{\r\n                label: 'distance',\r\n                maxLabel: 'Long distance',\r\n                medLabel: 'City block',\r\n                minLabel: 'Face-to-face',\r\n                value: {\r\n                    min: 0,\r\n                    max: 100\r\n                }\r\n            }],\r\n            icon: 'distance',\r\n            id: 'adf-asdf-asdf-as',\r\n            name: 'Distance abc'\r\n        }\r\n    },\r\n})"
+                },
+                {
+                    "name": "lighting",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/component/addon/addon.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "() => ({\r\n    component: AddonComponent,\r\n    props: {\r\n        addon: {\r\n            author: 'Josue Pacheco',\r\n            characteristics: [{\r\n                label: 'lighting',\r\n                maxLabel: 'Night',\r\n                medLabel: 'Shadowy',\r\n                minLabel: 'Daytime',\r\n                value: {\r\n                    min: 0,\r\n                    max: 100\r\n                }\r\n            }],\r\n            icon: 'lighting',\r\n            id: 'adf-asdf-asdf-as',\r\n            name: 'lighting abc'\r\n        }\r\n    },\r\n})"
+                },
+                {
+                    "name": "visibility",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/component/addon/addon.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "() => ({\r\n    component: AddonComponent,\r\n    props: {\r\n        addon: {\r\n            author: 'Josue Pacheco',\r\n            characteristics: [{\r\n                label: 'visibility',\r\n                maxLabel: 'Crowded',\r\n                medLabel: 'Some groups',\r\n                minLabel: 'Clear scene',\r\n                value: {\r\n                    min: 0,\r\n                    max: 100\r\n                }\r\n            }],\r\n            icon: 'visibility',\r\n            id: 'adf-asdf-asdf-as',\r\n            name: 'visibility abc'\r\n        }\r\n    },\r\n})"
+                }
+            ],
+            "src/app/component/form/form.stories.ts": [
+                {
+                    "name": "basic",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/component/form/form.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "() => ({\r\n    component: FormComponent,\r\n    props: {\r\n        addon: null\r\n    }\r\n})"
+                }
+            ],
+            "src/test.ts": [
+                {
+                    "name": "context",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/test.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "require.context('./', true, /\\.spec\\.ts$/)"
+                },
+                {
+                    "name": "require",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/test.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "literal type"
+                }
+            ],
+            "src/app/graphql/mutations/addon.mutation.ts": [
+                {
+                    "name": "createAddon",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/graphql/mutations/addon.mutation.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "`\r\nmutation CreateAddon($addon:CreateAddonInput!) {\r\ncreateAddon(input: $addon) {\r\nid\r\nauthor\r\ncharacteristics {\r\nlabel\r\nmaxLabel\r\nmedLabel\r\nminLabel\r\nvalue {\r\nmax\r\nmin\r\n}\r\n}\r\nname\r\nicon\r\n}\r\n}\r\n`"
+                },
+                {
+                    "name": "updateAddon",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/graphql/mutations/addon.mutation.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "`\r\n    mutation updateAddon($addon:UpdateAddonInput!){\r\n        updateAddon(input: $addon) {\r\n            author\r\n            icon\r\n            id\r\n            name\r\n            characteristics {\r\n                value {\r\n                    max\r\n                    min\r\n            }\r\n        }\r\n    }\r\n}\r\n\r\n`"
+                }
+            ],
+            "src/environments/environment.prod.ts": [
+                {
+                    "name": "environment",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/environments/environment.prod.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "object",
+                    "defaultValue": "{\n  production: true\n}"
+                }
+            ],
+            "src/environments/environment.ts": [
+                {
+                    "name": "environment",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/environments/environment.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "object",
+                    "defaultValue": "{\n  production: false\n}"
+                }
+            ],
+            "src/app/graphql/queries/addon.queries.ts": [
+                {
+                    "name": "getAddonByID",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/graphql/queries/addon.queries.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "`\r\n    query getAddon{\r\n        getAddon(id:\"f9abf63a-3dcc-400a-a445-7be24fa723be\"){\r\n            id\r\n            author\r\n            characteristics {\r\n                label\r\n                maxLabel\r\n                medLabel\r\n                minLabel\r\n                value {\r\n                    max\r\n                    min\r\n                }\r\n            }\r\n            name\r\n            icon\r\n        }\r\n    }\r\n`"
+                }
+            ]
+        },
+        "groupedFunctions": {},
+        "groupedEnumerations": {},
+        "groupedTypeAliases": {}
+    },
+    "routes": [],
+    "coverage": {
+        "count": 0,
+        "status": "low",
+        "files": [
+            {
+                "filePath": "e2e/src/app.po.ts",
+                "type": "class",
+                "linktype": "classe",
+                "name": "AppPage",
+                "coveragePercent": 0,
+                "coverageCount": "0/3",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/app.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "AppComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/7",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/component/addon/addon.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "AddonComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/16",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/component/addon/addon.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "angle",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/component/addon/addon.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "distance",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/component/addon/addon.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "lighting",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/component/addon/addon.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "visibility",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/component/form/form.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "FormComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/8",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/component/form/form.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "basic",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/graphql/models.ts",
+                "type": "interface",
+                "linktype": "interface",
+                "name": "AddonCharacteristics",
+                "coveragePercent": 0,
+                "coverageCount": "0/6",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/graphql/models.ts",
+                "type": "interface",
+                "linktype": "interface",
+                "name": "AddonCharacteristicsInput",
+                "coveragePercent": 0,
+                "coverageCount": "0/6",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/graphql/models.ts",
+                "type": "interface",
+                "linktype": "interface",
+                "name": "AddonCharacteristicsValueInput",
+                "coveragePercent": 0,
+                "coverageCount": "0/3",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/graphql/models.ts",
+                "type": "interface",
+                "linktype": "interface",
+                "name": "AddonModel",
+                "coveragePercent": 0,
+                "coverageCount": "0/6",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/graphql/models.ts",
+                "type": "interface",
+                "linktype": "interface",
+                "name": "CharacteristicsValue",
+                "coveragePercent": 0,
+                "coverageCount": "0/3",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/graphql/models.ts",
+                "type": "interface",
+                "linktype": "interface",
+                "name": "CreateAddonInput",
+                "coveragePercent": 0,
+                "coverageCount": "0/5",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/graphql/models.ts",
+                "type": "interface",
+                "linktype": "interface",
+                "name": "DeleteAddonInput",
+                "coveragePercent": 0,
+                "coverageCount": "0/2",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/graphql/models.ts",
+                "type": "interface",
+                "linktype": "interface",
+                "name": "UpdateAddonInput",
+                "coveragePercent": 0,
+                "coverageCount": "0/6",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/graphql/mutations/addon.mutation.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "createAddon",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/graphql/mutations/addon.mutation.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "updateAddon",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/graphql/queries/addon.queries.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "getAddonByID",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/services/addon.service.ts",
+                "type": "injectable",
+                "linktype": "injectable",
+                "name": "AddonService",
+                "coveragePercent": 0,
+                "coverageCount": "0/5",
+                "status": "low"
+            },
+            {
+                "filePath": "src/environments/environment.prod.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "environment",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/environments/environment.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "environment",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/test.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "context",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/test.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "require",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            }
+        ]
+    }
+}

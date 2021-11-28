@@ -1,0 +1,46 @@
+<form class='form' [formGroup]="form">
+    <div class='error' *ngIf='error'>Error: {{error}}</div>
+    <div class='field'>
+        <label>Name*:</label>
+        <input required formControlName='name'>
+    </div>
+    <div class='field'>
+        <label>Author:</label>
+        <input formControlName='author'>
+    </div>
+    <div class='field'>
+        <label>Icon*:</label>
+        <select required formControlName='icon'>
+            <option value='angle'>Angle</option>
+            <option value='distance'>Distance</option>
+            <option value='lighting'>Lighting</option>
+            <option value='visibility'>Visibility</option>
+        </select>
+    </div>
+    <div class='field'>
+        <label>Label*:</label>
+        <input required formControlName='label'>
+    </div>
+    <div class='field'>
+        <label>Max Label:</label>
+        <input formControlName='maxLabel'>
+    </div>
+    <div class='field'>
+        <label>Med Label:</label>
+        <input formControlName='medLabel'>
+    </div>
+    <div class='field'>
+        <label>Min Label:</label>
+        <input formControlName='minLabel'>
+    </div>
+    <div class='field'>
+        <label>Max Value*:</label>
+        <input formControlName='max'>
+    </div>
+    <div class='field'>
+        <label>Min Value*:</label>
+        <input formControlName='min'>
+    </div>
+
+    <button (click)='save()'>Save</button>
+</form>

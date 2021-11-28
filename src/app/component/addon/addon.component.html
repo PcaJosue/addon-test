@@ -1,0 +1,18 @@
+<div class='addon'>
+    <img class='addon__icon' src="../assets/icons/{{addon.icon}}.svg" alt="icon">
+    <div class="container">
+        <div class="name">{{addon.characteristics[0].label | titlecase}}</div>
+        <div class="slider-track"></div>
+        <input type="range" [min]="addon.characteristics[0].value.min" [max]="addon.characteristics[0].value.max"
+            [value]="addon.characteristics[1] ? addon.characteristics[1].value.min: addon.characteristics[0].value.min "
+            id="slider-1" (input)="slideOne()">
+        <input type="range" [min]="addon.characteristics[0].value.min" [max]="addon.characteristics[0].value.max"
+            [value]="addon.characteristics[1] ? addon.characteristics[1].value.max: addon.characteristics[0].value.max"
+            id="slider-2" (input)="slideTwo()">
+        <div class='addon__labels'>
+            <span>{{addon.characteristics[0].minLabel}}</span>
+            <span>{{addon.characteristics[0].medLabel}}</span>
+            <span>{{addon.characteristics[0].maxLabel}}</span>
+        </div>
+    </div>
+</div>
