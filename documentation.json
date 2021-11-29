@@ -3,13 +3,22 @@
     "interfaces": [
         {
             "name": "AddonCharacteristics",
-            "id": "interface-AddonCharacteristics-ae0585e142d304f488f53813f54f10eb1e83c6e9239b691f9f16e2f898aedc1e9ebf19aad32b8a588021772d88a4699e7d6ef0140f5798f1dbb8517900af05bb",
+            "id": "interface-AddonCharacteristics-8ba8383518f3c4bf25ab8c06ae3367993a3886891949c9dadc2b31b34dd5d056a4e0e20aab7a38cfc3571fefa4d1336553110c7959544ab5af35f7ccf78449e8",
             "file": "src/app/graphql/models.ts",
             "deprecated": false,
             "deprecationMessage": "",
             "type": "interface",
-            "sourceCode": "export interface AddonModel {\r\n    author?: string\r\n    characteristics: AddonCharacteristics[]\r\n    icon: string\r\n    id: string\r\n    name: string\r\n}\r\n\r\nexport interface AddonCharacteristics {\r\n    label: string\r\n    maxLabel?: string\r\n    medLabel?: string\r\n    minLabel?: string\r\n    value: CharacteristicsValue\r\n}\r\n\r\nexport interface CharacteristicsValue {\r\n    max: number\r\n    min: number\r\n}\r\n\r\nexport interface AddonCharacteristicsValueInput {\r\n    max: number\r\n    min: number\r\n}\r\n\r\nexport interface CreateAddonInput {\r\n    author?: string\r\n    characteristics: AddonCharacteristicsInput[]\r\n    icon: string\r\n    name: string\r\n}\r\n\r\nexport interface DeleteAddonInput {\r\n    id: string\r\n}\r\n\r\nexport interface UpdateAddonInput {\r\n    author?: string\r\n    characteristics?: AddonCharacteristicsInput[]\r\n    icon?: string\r\n    id: string\r\n    name?: string\r\n}\r\n\r\nexport interface AddonCharacteristicsInput {\r\n    label?: string\r\n    maxLabel?: string\r\n    medLabel?: string\r\n    minLabel?: string\r\n    value: AddonCharacteristicsValueInput\r\n}\r\n\r\n",
+            "sourceCode": "export interface AddonModel {\r\n    author?: string\r\n    characteristics: AddonCharacteristics[]\r\n    id: string\r\n    name: string\r\n}\r\n\r\nexport interface AddonCharacteristics {\r\n    label: string\r\n    maxLabel?: string\r\n    medLabel?: string\r\n    minLabel?: string\r\n    icon: string\r\n    value: CharacteristicsValue\r\n}\r\n\r\nexport interface CharacteristicsValue {\r\n    max: number\r\n    min: number\r\n}\r\n\r\nexport interface AddonCharacteristicsValueInput {\r\n    max: number\r\n    min: number\r\n}\r\n\r\nexport interface CreateAddonInput {\r\n    author?: string\r\n    characteristics: AddonCharacteristicsInput[]\r\n    name: string\r\n}\r\n\r\nexport interface DeleteAddonInput {\r\n    id: string\r\n}\r\n\r\nexport interface UpdateAddonInput {\r\n    author?: string\r\n    characteristics?: AddonCharacteristicsInput[]\r\n    id: string\r\n    name?: string\r\n}\r\n\r\nexport interface AddonCharacteristicsInput {\r\n    icon?: string\r\n    label?: String\r\n    maxLabel?: String\r\n    medLabel?: String\r\n    minLabel?: String\r\n    value: AddonCharacteristicsValueInput\r\n}\r\n\r\n",
             "properties": [
+                {
+                    "name": "icon",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 13
+                },
                 {
                     "name": "label",
                     "deprecated": false,
@@ -17,7 +26,7 @@
                     "type": "string",
                     "optional": false,
                     "description": "",
-                    "line": 10
+                    "line": 9
                 },
                 {
                     "name": "maxLabel",
@@ -26,7 +35,7 @@
                     "type": "string",
                     "optional": true,
                     "description": "",
-                    "line": 11
+                    "line": 10
                 },
                 {
                     "name": "medLabel",
@@ -35,7 +44,7 @@
                     "type": "string",
                     "optional": true,
                     "description": "",
-                    "line": 12
+                    "line": 11
                 },
                 {
                     "name": "minLabel",
@@ -44,7 +53,7 @@
                     "type": "string",
                     "optional": true,
                     "description": "",
-                    "line": 13
+                    "line": 12
                 },
                 {
                     "name": "value",
@@ -62,48 +71,57 @@
         },
         {
             "name": "AddonCharacteristicsInput",
-            "id": "interface-AddonCharacteristicsInput-ae0585e142d304f488f53813f54f10eb1e83c6e9239b691f9f16e2f898aedc1e9ebf19aad32b8a588021772d88a4699e7d6ef0140f5798f1dbb8517900af05bb",
+            "id": "interface-AddonCharacteristicsInput-8ba8383518f3c4bf25ab8c06ae3367993a3886891949c9dadc2b31b34dd5d056a4e0e20aab7a38cfc3571fefa4d1336553110c7959544ab5af35f7ccf78449e8",
             "file": "src/app/graphql/models.ts",
             "deprecated": false,
             "deprecationMessage": "",
             "type": "interface",
-            "sourceCode": "export interface AddonModel {\r\n    author?: string\r\n    characteristics: AddonCharacteristics[]\r\n    icon: string\r\n    id: string\r\n    name: string\r\n}\r\n\r\nexport interface AddonCharacteristics {\r\n    label: string\r\n    maxLabel?: string\r\n    medLabel?: string\r\n    minLabel?: string\r\n    value: CharacteristicsValue\r\n}\r\n\r\nexport interface CharacteristicsValue {\r\n    max: number\r\n    min: number\r\n}\r\n\r\nexport interface AddonCharacteristicsValueInput {\r\n    max: number\r\n    min: number\r\n}\r\n\r\nexport interface CreateAddonInput {\r\n    author?: string\r\n    characteristics: AddonCharacteristicsInput[]\r\n    icon: string\r\n    name: string\r\n}\r\n\r\nexport interface DeleteAddonInput {\r\n    id: string\r\n}\r\n\r\nexport interface UpdateAddonInput {\r\n    author?: string\r\n    characteristics?: AddonCharacteristicsInput[]\r\n    icon?: string\r\n    id: string\r\n    name?: string\r\n}\r\n\r\nexport interface AddonCharacteristicsInput {\r\n    label?: string\r\n    maxLabel?: string\r\n    medLabel?: string\r\n    minLabel?: string\r\n    value: AddonCharacteristicsValueInput\r\n}\r\n\r\n",
+            "sourceCode": "export interface AddonModel {\r\n    author?: string\r\n    characteristics: AddonCharacteristics[]\r\n    id: string\r\n    name: string\r\n}\r\n\r\nexport interface AddonCharacteristics {\r\n    label: string\r\n    maxLabel?: string\r\n    medLabel?: string\r\n    minLabel?: string\r\n    icon: string\r\n    value: CharacteristicsValue\r\n}\r\n\r\nexport interface CharacteristicsValue {\r\n    max: number\r\n    min: number\r\n}\r\n\r\nexport interface AddonCharacteristicsValueInput {\r\n    max: number\r\n    min: number\r\n}\r\n\r\nexport interface CreateAddonInput {\r\n    author?: string\r\n    characteristics: AddonCharacteristicsInput[]\r\n    name: string\r\n}\r\n\r\nexport interface DeleteAddonInput {\r\n    id: string\r\n}\r\n\r\nexport interface UpdateAddonInput {\r\n    author?: string\r\n    characteristics?: AddonCharacteristicsInput[]\r\n    id: string\r\n    name?: string\r\n}\r\n\r\nexport interface AddonCharacteristicsInput {\r\n    icon?: string\r\n    label?: String\r\n    maxLabel?: String\r\n    medLabel?: String\r\n    minLabel?: String\r\n    value: AddonCharacteristicsValueInput\r\n}\r\n\r\n",
             "properties": [
                 {
-                    "name": "label",
+                    "name": "icon",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "string",
                     "optional": true,
                     "description": "",
-                    "line": 47
+                    "line": 45
+                },
+                {
+                    "name": "label",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "String",
+                    "optional": true,
+                    "description": "",
+                    "line": 46
                 },
                 {
                     "name": "maxLabel",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "type": "string",
+                    "type": "String",
                     "optional": true,
                     "description": "",
-                    "line": 48
+                    "line": 47
                 },
                 {
                     "name": "medLabel",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "type": "string",
+                    "type": "String",
                     "optional": true,
                     "description": "",
-                    "line": 49
+                    "line": 48
                 },
                 {
                     "name": "minLabel",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "type": "string",
+                    "type": "String",
                     "optional": true,
                     "description": "",
-                    "line": 50
+                    "line": 49
                 },
                 {
                     "name": "value",
@@ -112,7 +130,7 @@
                     "type": "AddonCharacteristicsValueInput",
                     "optional": false,
                     "description": "",
-                    "line": 51
+                    "line": 50
                 }
             ],
             "indexSignatures": [],
@@ -121,12 +139,12 @@
         },
         {
             "name": "AddonCharacteristicsValueInput",
-            "id": "interface-AddonCharacteristicsValueInput-ae0585e142d304f488f53813f54f10eb1e83c6e9239b691f9f16e2f898aedc1e9ebf19aad32b8a588021772d88a4699e7d6ef0140f5798f1dbb8517900af05bb",
+            "id": "interface-AddonCharacteristicsValueInput-8ba8383518f3c4bf25ab8c06ae3367993a3886891949c9dadc2b31b34dd5d056a4e0e20aab7a38cfc3571fefa4d1336553110c7959544ab5af35f7ccf78449e8",
             "file": "src/app/graphql/models.ts",
             "deprecated": false,
             "deprecationMessage": "",
             "type": "interface",
-            "sourceCode": "export interface AddonModel {\r\n    author?: string\r\n    characteristics: AddonCharacteristics[]\r\n    icon: string\r\n    id: string\r\n    name: string\r\n}\r\n\r\nexport interface AddonCharacteristics {\r\n    label: string\r\n    maxLabel?: string\r\n    medLabel?: string\r\n    minLabel?: string\r\n    value: CharacteristicsValue\r\n}\r\n\r\nexport interface CharacteristicsValue {\r\n    max: number\r\n    min: number\r\n}\r\n\r\nexport interface AddonCharacteristicsValueInput {\r\n    max: number\r\n    min: number\r\n}\r\n\r\nexport interface CreateAddonInput {\r\n    author?: string\r\n    characteristics: AddonCharacteristicsInput[]\r\n    icon: string\r\n    name: string\r\n}\r\n\r\nexport interface DeleteAddonInput {\r\n    id: string\r\n}\r\n\r\nexport interface UpdateAddonInput {\r\n    author?: string\r\n    characteristics?: AddonCharacteristicsInput[]\r\n    icon?: string\r\n    id: string\r\n    name?: string\r\n}\r\n\r\nexport interface AddonCharacteristicsInput {\r\n    label?: string\r\n    maxLabel?: string\r\n    medLabel?: string\r\n    minLabel?: string\r\n    value: AddonCharacteristicsValueInput\r\n}\r\n\r\n",
+            "sourceCode": "export interface AddonModel {\r\n    author?: string\r\n    characteristics: AddonCharacteristics[]\r\n    id: string\r\n    name: string\r\n}\r\n\r\nexport interface AddonCharacteristics {\r\n    label: string\r\n    maxLabel?: string\r\n    medLabel?: string\r\n    minLabel?: string\r\n    icon: string\r\n    value: CharacteristicsValue\r\n}\r\n\r\nexport interface CharacteristicsValue {\r\n    max: number\r\n    min: number\r\n}\r\n\r\nexport interface AddonCharacteristicsValueInput {\r\n    max: number\r\n    min: number\r\n}\r\n\r\nexport interface CreateAddonInput {\r\n    author?: string\r\n    characteristics: AddonCharacteristicsInput[]\r\n    name: string\r\n}\r\n\r\nexport interface DeleteAddonInput {\r\n    id: string\r\n}\r\n\r\nexport interface UpdateAddonInput {\r\n    author?: string\r\n    characteristics?: AddonCharacteristicsInput[]\r\n    id: string\r\n    name?: string\r\n}\r\n\r\nexport interface AddonCharacteristicsInput {\r\n    icon?: string\r\n    label?: String\r\n    maxLabel?: String\r\n    medLabel?: String\r\n    minLabel?: String\r\n    value: AddonCharacteristicsValueInput\r\n}\r\n\r\n",
             "properties": [
                 {
                     "name": "max",
@@ -153,12 +171,12 @@
         },
         {
             "name": "AddonModel",
-            "id": "interface-AddonModel-ae0585e142d304f488f53813f54f10eb1e83c6e9239b691f9f16e2f898aedc1e9ebf19aad32b8a588021772d88a4699e7d6ef0140f5798f1dbb8517900af05bb",
+            "id": "interface-AddonModel-8ba8383518f3c4bf25ab8c06ae3367993a3886891949c9dadc2b31b34dd5d056a4e0e20aab7a38cfc3571fefa4d1336553110c7959544ab5af35f7ccf78449e8",
             "file": "src/app/graphql/models.ts",
             "deprecated": false,
             "deprecationMessage": "",
             "type": "interface",
-            "sourceCode": "export interface AddonModel {\r\n    author?: string\r\n    characteristics: AddonCharacteristics[]\r\n    icon: string\r\n    id: string\r\n    name: string\r\n}\r\n\r\nexport interface AddonCharacteristics {\r\n    label: string\r\n    maxLabel?: string\r\n    medLabel?: string\r\n    minLabel?: string\r\n    value: CharacteristicsValue\r\n}\r\n\r\nexport interface CharacteristicsValue {\r\n    max: number\r\n    min: number\r\n}\r\n\r\nexport interface AddonCharacteristicsValueInput {\r\n    max: number\r\n    min: number\r\n}\r\n\r\nexport interface CreateAddonInput {\r\n    author?: string\r\n    characteristics: AddonCharacteristicsInput[]\r\n    icon: string\r\n    name: string\r\n}\r\n\r\nexport interface DeleteAddonInput {\r\n    id: string\r\n}\r\n\r\nexport interface UpdateAddonInput {\r\n    author?: string\r\n    characteristics?: AddonCharacteristicsInput[]\r\n    icon?: string\r\n    id: string\r\n    name?: string\r\n}\r\n\r\nexport interface AddonCharacteristicsInput {\r\n    label?: string\r\n    maxLabel?: string\r\n    medLabel?: string\r\n    minLabel?: string\r\n    value: AddonCharacteristicsValueInput\r\n}\r\n\r\n",
+            "sourceCode": "export interface AddonModel {\r\n    author?: string\r\n    characteristics: AddonCharacteristics[]\r\n    id: string\r\n    name: string\r\n}\r\n\r\nexport interface AddonCharacteristics {\r\n    label: string\r\n    maxLabel?: string\r\n    medLabel?: string\r\n    minLabel?: string\r\n    icon: string\r\n    value: CharacteristicsValue\r\n}\r\n\r\nexport interface CharacteristicsValue {\r\n    max: number\r\n    min: number\r\n}\r\n\r\nexport interface AddonCharacteristicsValueInput {\r\n    max: number\r\n    min: number\r\n}\r\n\r\nexport interface CreateAddonInput {\r\n    author?: string\r\n    characteristics: AddonCharacteristicsInput[]\r\n    name: string\r\n}\r\n\r\nexport interface DeleteAddonInput {\r\n    id: string\r\n}\r\n\r\nexport interface UpdateAddonInput {\r\n    author?: string\r\n    characteristics?: AddonCharacteristicsInput[]\r\n    id: string\r\n    name?: string\r\n}\r\n\r\nexport interface AddonCharacteristicsInput {\r\n    icon?: string\r\n    label?: String\r\n    maxLabel?: String\r\n    medLabel?: String\r\n    minLabel?: String\r\n    value: AddonCharacteristicsValueInput\r\n}\r\n\r\n",
             "properties": [
                 {
                     "name": "author",
@@ -179,7 +197,7 @@
                     "line": 3
                 },
                 {
-                    "name": "icon",
+                    "name": "id",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "string",
@@ -188,22 +206,13 @@
                     "line": 4
                 },
                 {
-                    "name": "id",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "string",
-                    "optional": false,
-                    "description": "",
-                    "line": 5
-                },
-                {
                     "name": "name",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "string",
                     "optional": false,
                     "description": "",
-                    "line": 6
+                    "line": 5
                 }
             ],
             "indexSignatures": [],
@@ -212,12 +221,12 @@
         },
         {
             "name": "CharacteristicsValue",
-            "id": "interface-CharacteristicsValue-ae0585e142d304f488f53813f54f10eb1e83c6e9239b691f9f16e2f898aedc1e9ebf19aad32b8a588021772d88a4699e7d6ef0140f5798f1dbb8517900af05bb",
+            "id": "interface-CharacteristicsValue-8ba8383518f3c4bf25ab8c06ae3367993a3886891949c9dadc2b31b34dd5d056a4e0e20aab7a38cfc3571fefa4d1336553110c7959544ab5af35f7ccf78449e8",
             "file": "src/app/graphql/models.ts",
             "deprecated": false,
             "deprecationMessage": "",
             "type": "interface",
-            "sourceCode": "export interface AddonModel {\r\n    author?: string\r\n    characteristics: AddonCharacteristics[]\r\n    icon: string\r\n    id: string\r\n    name: string\r\n}\r\n\r\nexport interface AddonCharacteristics {\r\n    label: string\r\n    maxLabel?: string\r\n    medLabel?: string\r\n    minLabel?: string\r\n    value: CharacteristicsValue\r\n}\r\n\r\nexport interface CharacteristicsValue {\r\n    max: number\r\n    min: number\r\n}\r\n\r\nexport interface AddonCharacteristicsValueInput {\r\n    max: number\r\n    min: number\r\n}\r\n\r\nexport interface CreateAddonInput {\r\n    author?: string\r\n    characteristics: AddonCharacteristicsInput[]\r\n    icon: string\r\n    name: string\r\n}\r\n\r\nexport interface DeleteAddonInput {\r\n    id: string\r\n}\r\n\r\nexport interface UpdateAddonInput {\r\n    author?: string\r\n    characteristics?: AddonCharacteristicsInput[]\r\n    icon?: string\r\n    id: string\r\n    name?: string\r\n}\r\n\r\nexport interface AddonCharacteristicsInput {\r\n    label?: string\r\n    maxLabel?: string\r\n    medLabel?: string\r\n    minLabel?: string\r\n    value: AddonCharacteristicsValueInput\r\n}\r\n\r\n",
+            "sourceCode": "export interface AddonModel {\r\n    author?: string\r\n    characteristics: AddonCharacteristics[]\r\n    id: string\r\n    name: string\r\n}\r\n\r\nexport interface AddonCharacteristics {\r\n    label: string\r\n    maxLabel?: string\r\n    medLabel?: string\r\n    minLabel?: string\r\n    icon: string\r\n    value: CharacteristicsValue\r\n}\r\n\r\nexport interface CharacteristicsValue {\r\n    max: number\r\n    min: number\r\n}\r\n\r\nexport interface AddonCharacteristicsValueInput {\r\n    max: number\r\n    min: number\r\n}\r\n\r\nexport interface CreateAddonInput {\r\n    author?: string\r\n    characteristics: AddonCharacteristicsInput[]\r\n    name: string\r\n}\r\n\r\nexport interface DeleteAddonInput {\r\n    id: string\r\n}\r\n\r\nexport interface UpdateAddonInput {\r\n    author?: string\r\n    characteristics?: AddonCharacteristicsInput[]\r\n    id: string\r\n    name?: string\r\n}\r\n\r\nexport interface AddonCharacteristicsInput {\r\n    icon?: string\r\n    label?: String\r\n    maxLabel?: String\r\n    medLabel?: String\r\n    minLabel?: String\r\n    value: AddonCharacteristicsValueInput\r\n}\r\n\r\n",
             "properties": [
                 {
                     "name": "max",
@@ -244,12 +253,12 @@
         },
         {
             "name": "CreateAddonInput",
-            "id": "interface-CreateAddonInput-ae0585e142d304f488f53813f54f10eb1e83c6e9239b691f9f16e2f898aedc1e9ebf19aad32b8a588021772d88a4699e7d6ef0140f5798f1dbb8517900af05bb",
+            "id": "interface-CreateAddonInput-8ba8383518f3c4bf25ab8c06ae3367993a3886891949c9dadc2b31b34dd5d056a4e0e20aab7a38cfc3571fefa4d1336553110c7959544ab5af35f7ccf78449e8",
             "file": "src/app/graphql/models.ts",
             "deprecated": false,
             "deprecationMessage": "",
             "type": "interface",
-            "sourceCode": "export interface AddonModel {\r\n    author?: string\r\n    characteristics: AddonCharacteristics[]\r\n    icon: string\r\n    id: string\r\n    name: string\r\n}\r\n\r\nexport interface AddonCharacteristics {\r\n    label: string\r\n    maxLabel?: string\r\n    medLabel?: string\r\n    minLabel?: string\r\n    value: CharacteristicsValue\r\n}\r\n\r\nexport interface CharacteristicsValue {\r\n    max: number\r\n    min: number\r\n}\r\n\r\nexport interface AddonCharacteristicsValueInput {\r\n    max: number\r\n    min: number\r\n}\r\n\r\nexport interface CreateAddonInput {\r\n    author?: string\r\n    characteristics: AddonCharacteristicsInput[]\r\n    icon: string\r\n    name: string\r\n}\r\n\r\nexport interface DeleteAddonInput {\r\n    id: string\r\n}\r\n\r\nexport interface UpdateAddonInput {\r\n    author?: string\r\n    characteristics?: AddonCharacteristicsInput[]\r\n    icon?: string\r\n    id: string\r\n    name?: string\r\n}\r\n\r\nexport interface AddonCharacteristicsInput {\r\n    label?: string\r\n    maxLabel?: string\r\n    medLabel?: string\r\n    minLabel?: string\r\n    value: AddonCharacteristicsValueInput\r\n}\r\n\r\n",
+            "sourceCode": "export interface AddonModel {\r\n    author?: string\r\n    characteristics: AddonCharacteristics[]\r\n    id: string\r\n    name: string\r\n}\r\n\r\nexport interface AddonCharacteristics {\r\n    label: string\r\n    maxLabel?: string\r\n    medLabel?: string\r\n    minLabel?: string\r\n    icon: string\r\n    value: CharacteristicsValue\r\n}\r\n\r\nexport interface CharacteristicsValue {\r\n    max: number\r\n    min: number\r\n}\r\n\r\nexport interface AddonCharacteristicsValueInput {\r\n    max: number\r\n    min: number\r\n}\r\n\r\nexport interface CreateAddonInput {\r\n    author?: string\r\n    characteristics: AddonCharacteristicsInput[]\r\n    name: string\r\n}\r\n\r\nexport interface DeleteAddonInput {\r\n    id: string\r\n}\r\n\r\nexport interface UpdateAddonInput {\r\n    author?: string\r\n    characteristics?: AddonCharacteristicsInput[]\r\n    id: string\r\n    name?: string\r\n}\r\n\r\nexport interface AddonCharacteristicsInput {\r\n    icon?: string\r\n    label?: String\r\n    maxLabel?: String\r\n    medLabel?: String\r\n    minLabel?: String\r\n    value: AddonCharacteristicsValueInput\r\n}\r\n\r\n",
             "properties": [
                 {
                     "name": "author",
@@ -270,22 +279,13 @@
                     "line": 29
                 },
                 {
-                    "name": "icon",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "string",
-                    "optional": false,
-                    "description": "",
-                    "line": 30
-                },
-                {
                     "name": "name",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "string",
                     "optional": false,
                     "description": "",
-                    "line": 31
+                    "line": 30
                 }
             ],
             "indexSignatures": [],
@@ -294,12 +294,12 @@
         },
         {
             "name": "DeleteAddonInput",
-            "id": "interface-DeleteAddonInput-ae0585e142d304f488f53813f54f10eb1e83c6e9239b691f9f16e2f898aedc1e9ebf19aad32b8a588021772d88a4699e7d6ef0140f5798f1dbb8517900af05bb",
+            "id": "interface-DeleteAddonInput-8ba8383518f3c4bf25ab8c06ae3367993a3886891949c9dadc2b31b34dd5d056a4e0e20aab7a38cfc3571fefa4d1336553110c7959544ab5af35f7ccf78449e8",
             "file": "src/app/graphql/models.ts",
             "deprecated": false,
             "deprecationMessage": "",
             "type": "interface",
-            "sourceCode": "export interface AddonModel {\r\n    author?: string\r\n    characteristics: AddonCharacteristics[]\r\n    icon: string\r\n    id: string\r\n    name: string\r\n}\r\n\r\nexport interface AddonCharacteristics {\r\n    label: string\r\n    maxLabel?: string\r\n    medLabel?: string\r\n    minLabel?: string\r\n    value: CharacteristicsValue\r\n}\r\n\r\nexport interface CharacteristicsValue {\r\n    max: number\r\n    min: number\r\n}\r\n\r\nexport interface AddonCharacteristicsValueInput {\r\n    max: number\r\n    min: number\r\n}\r\n\r\nexport interface CreateAddonInput {\r\n    author?: string\r\n    characteristics: AddonCharacteristicsInput[]\r\n    icon: string\r\n    name: string\r\n}\r\n\r\nexport interface DeleteAddonInput {\r\n    id: string\r\n}\r\n\r\nexport interface UpdateAddonInput {\r\n    author?: string\r\n    characteristics?: AddonCharacteristicsInput[]\r\n    icon?: string\r\n    id: string\r\n    name?: string\r\n}\r\n\r\nexport interface AddonCharacteristicsInput {\r\n    label?: string\r\n    maxLabel?: string\r\n    medLabel?: string\r\n    minLabel?: string\r\n    value: AddonCharacteristicsValueInput\r\n}\r\n\r\n",
+            "sourceCode": "export interface AddonModel {\r\n    author?: string\r\n    characteristics: AddonCharacteristics[]\r\n    id: string\r\n    name: string\r\n}\r\n\r\nexport interface AddonCharacteristics {\r\n    label: string\r\n    maxLabel?: string\r\n    medLabel?: string\r\n    minLabel?: string\r\n    icon: string\r\n    value: CharacteristicsValue\r\n}\r\n\r\nexport interface CharacteristicsValue {\r\n    max: number\r\n    min: number\r\n}\r\n\r\nexport interface AddonCharacteristicsValueInput {\r\n    max: number\r\n    min: number\r\n}\r\n\r\nexport interface CreateAddonInput {\r\n    author?: string\r\n    characteristics: AddonCharacteristicsInput[]\r\n    name: string\r\n}\r\n\r\nexport interface DeleteAddonInput {\r\n    id: string\r\n}\r\n\r\nexport interface UpdateAddonInput {\r\n    author?: string\r\n    characteristics?: AddonCharacteristicsInput[]\r\n    id: string\r\n    name?: string\r\n}\r\n\r\nexport interface AddonCharacteristicsInput {\r\n    icon?: string\r\n    label?: String\r\n    maxLabel?: String\r\n    medLabel?: String\r\n    minLabel?: String\r\n    value: AddonCharacteristicsValueInput\r\n}\r\n\r\n",
             "properties": [
                 {
                     "name": "id",
@@ -308,7 +308,7 @@
                     "type": "string",
                     "optional": false,
                     "description": "",
-                    "line": 35
+                    "line": 34
                 }
             ],
             "indexSignatures": [],
@@ -317,12 +317,12 @@
         },
         {
             "name": "UpdateAddonInput",
-            "id": "interface-UpdateAddonInput-ae0585e142d304f488f53813f54f10eb1e83c6e9239b691f9f16e2f898aedc1e9ebf19aad32b8a588021772d88a4699e7d6ef0140f5798f1dbb8517900af05bb",
+            "id": "interface-UpdateAddonInput-8ba8383518f3c4bf25ab8c06ae3367993a3886891949c9dadc2b31b34dd5d056a4e0e20aab7a38cfc3571fefa4d1336553110c7959544ab5af35f7ccf78449e8",
             "file": "src/app/graphql/models.ts",
             "deprecated": false,
             "deprecationMessage": "",
             "type": "interface",
-            "sourceCode": "export interface AddonModel {\r\n    author?: string\r\n    characteristics: AddonCharacteristics[]\r\n    icon: string\r\n    id: string\r\n    name: string\r\n}\r\n\r\nexport interface AddonCharacteristics {\r\n    label: string\r\n    maxLabel?: string\r\n    medLabel?: string\r\n    minLabel?: string\r\n    value: CharacteristicsValue\r\n}\r\n\r\nexport interface CharacteristicsValue {\r\n    max: number\r\n    min: number\r\n}\r\n\r\nexport interface AddonCharacteristicsValueInput {\r\n    max: number\r\n    min: number\r\n}\r\n\r\nexport interface CreateAddonInput {\r\n    author?: string\r\n    characteristics: AddonCharacteristicsInput[]\r\n    icon: string\r\n    name: string\r\n}\r\n\r\nexport interface DeleteAddonInput {\r\n    id: string\r\n}\r\n\r\nexport interface UpdateAddonInput {\r\n    author?: string\r\n    characteristics?: AddonCharacteristicsInput[]\r\n    icon?: string\r\n    id: string\r\n    name?: string\r\n}\r\n\r\nexport interface AddonCharacteristicsInput {\r\n    label?: string\r\n    maxLabel?: string\r\n    medLabel?: string\r\n    minLabel?: string\r\n    value: AddonCharacteristicsValueInput\r\n}\r\n\r\n",
+            "sourceCode": "export interface AddonModel {\r\n    author?: string\r\n    characteristics: AddonCharacteristics[]\r\n    id: string\r\n    name: string\r\n}\r\n\r\nexport interface AddonCharacteristics {\r\n    label: string\r\n    maxLabel?: string\r\n    medLabel?: string\r\n    minLabel?: string\r\n    icon: string\r\n    value: CharacteristicsValue\r\n}\r\n\r\nexport interface CharacteristicsValue {\r\n    max: number\r\n    min: number\r\n}\r\n\r\nexport interface AddonCharacteristicsValueInput {\r\n    max: number\r\n    min: number\r\n}\r\n\r\nexport interface CreateAddonInput {\r\n    author?: string\r\n    characteristics: AddonCharacteristicsInput[]\r\n    name: string\r\n}\r\n\r\nexport interface DeleteAddonInput {\r\n    id: string\r\n}\r\n\r\nexport interface UpdateAddonInput {\r\n    author?: string\r\n    characteristics?: AddonCharacteristicsInput[]\r\n    id: string\r\n    name?: string\r\n}\r\n\r\nexport interface AddonCharacteristicsInput {\r\n    icon?: string\r\n    label?: String\r\n    maxLabel?: String\r\n    medLabel?: String\r\n    minLabel?: String\r\n    value: AddonCharacteristicsValueInput\r\n}\r\n\r\n",
             "properties": [
                 {
                     "name": "author",
@@ -331,7 +331,7 @@
                     "type": "string",
                     "optional": true,
                     "description": "",
-                    "line": 39
+                    "line": 38
                 },
                 {
                     "name": "characteristics",
@@ -340,16 +340,7 @@
                     "type": "AddonCharacteristicsInput[]",
                     "optional": true,
                     "description": "",
-                    "line": 40
-                },
-                {
-                    "name": "icon",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "string",
-                    "optional": true,
-                    "description": "",
-                    "line": 41
+                    "line": 39
                 },
                 {
                     "name": "id",
@@ -358,7 +349,7 @@
                     "type": "string",
                     "optional": false,
                     "description": "",
-                    "line": 42
+                    "line": 40
                 },
                 {
                     "name": "name",
@@ -367,7 +358,7 @@
                     "type": "string",
                     "optional": true,
                     "description": "",
-                    "line": 43
+                    "line": 41
                 }
             ],
             "indexSignatures": [],
@@ -528,7 +519,7 @@
     "components": [
         {
             "name": "AddonComponent",
-            "id": "component-AddonComponent-3c1927a2715a6a104fcc7f6a8e009290ae4787b6425bd7ff45cdf39a53af078bfa692d7f813301b5ba5795c3e8d9fea9bc6e6e2829af31e784792165eba9cbf4",
+            "id": "component-AddonComponent-47836f200a7ca811340914f89649495b06cb55e338f4558ba8afbddf8999c923b81ced7242cdcd5e7576aecdb1202c6bd35a2635a9768a379d7a539927f0e8fc",
             "file": "src/app/component/addon/addon.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -676,7 +667,7 @@
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 78,
+                    "line": 83,
                     "deprecated": false,
                     "deprecationMessage": ""
                 },
@@ -738,7 +729,7 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { AfterViewInit, Component, EventEmitter, Input, OnInit, Output } from '@angular/core';\nimport { AddonModel } from '../../graphql/models';\n\n@Component({\n  selector: 'app-addon',\n  templateUrl: './addon.component.html',\n  styleUrls: ['./addon.component.scss']\n})\nexport class AddonComponent implements OnInit, AfterViewInit {\n\n  slider1: string = 'slider-1';\n  slider2: string = 'slider-2';\n  track: string = 'slider-track';\n\n  @Input('addon') addon: AddonModel;\n  @Output('onUpdate') onUpdate = new EventEmitter<any>();\n  sliderOne: any;\n  sliderTwo: any;\n  displayValOne: any\n  displayValTwo: any\n  minGap = 0;\n  sliderTrack: any\n  sliderMaxValue: any;\n  thumb: any\n  constructor() { }\n\n  ngOnInit(): void {\n    if (this.addon) {\n      this.slider1 = `slider-1-${this.addon.id}`\n      this.slider2 = `slider-2-${this.addon.id}`\n      this.track = `slider-track-${this.addon.id}`\n    }\n  }\n\n\n\n  ngAfterViewInit() {\n\n    this.sliderOne = document.getElementById(this.slider1);\n    this.sliderTwo = document.getElementById(this.slider2);;\n    this.sliderTrack = document.getElementById(this.track);\n    this.sliderMaxValue = this.addon.characteristics[0].value.max\n\n    this.slideOne();\n    this.slideTwo();\n  }\n\n  slideOne() {\n    if (parseInt(this.sliderTwo.value) - parseInt(this.sliderOne.value) <= this.minGap) {\n      this.sliderOne.value = parseInt(this.sliderTwo.value) - this.minGap;\n    }\n    this.fillColor();\n\n  }\n\n  slideTwo() {\n    if (parseInt(this.sliderTwo.value) - parseInt(this.sliderOne.value) <= this.minGap) {\n      this.sliderTwo.value = parseInt(this.sliderOne.value) + this.minGap;\n    }\n    this.fillColor();\n  }\n\n  sendValues() {\n    this.onUpdate.emit({\n      action: 'update', addon: {\n        id: this.addon.id,\n        characteristics: {\n          value: {\n            min: this.sliderOne.value,\n            max: this.sliderTwo.value\n          }\n        },\n        // icon: this.form.value.icon,\n      }\n    })\n  }\n\n  fillColor() {\n    const percent1 = (this.sliderOne.value / this.sliderMaxValue) * 100;\n    const percent2 = (this.sliderTwo.value / this.sliderMaxValue) * 100;\n    this.sliderTrack.style.background = `linear-gradient(90deg, #eeeeee ${percent1}% ,rgba(92, 184, 92, 0.1) ${percent1}% ,#5CB85C 1%, rgba(92, 184, 92, 0.1) ${percent2}%, #eeeeee ${percent2}%)`;\n  }\n\n}\n",
+            "sourceCode": "import { AfterViewInit, Component, EventEmitter, Input, OnInit, Output } from '@angular/core';\nimport { AddonModel } from '../../graphql/models';\n\n@Component({\n  selector: 'app-addon',\n  templateUrl: './addon.component.html',\n  styleUrls: ['./addon.component.scss']\n})\nexport class AddonComponent implements OnInit, AfterViewInit {\n\n  slider1: string = 'slider-1';\n  slider2: string = 'slider-2';\n  track: string = 'slider-track';\n\n  @Input('addon') addon: AddonModel;\n  @Output('onUpdate') onUpdate = new EventEmitter<any>();\n  sliderOne: any;\n  sliderTwo: any;\n  displayValOne: any\n  displayValTwo: any\n  minGap = 0;\n  sliderTrack: any\n  sliderMaxValue: any;\n  thumb: any\n  constructor() { }\n\n  ngOnInit(): void {\n    if (this.addon) {\n      this.slider1 = `slider-1-${this.addon.id}`\n      this.slider2 = `slider-2-${this.addon.id}`\n      this.track = `slider-track-${this.addon.id}`\n    }\n  }\n\n\n\n  ngAfterViewInit() {\n\n    this.sliderOne = document.getElementById(this.slider1);\n    this.sliderTwo = document.getElementById(this.slider2);;\n    this.sliderTrack = document.getElementById(this.track);\n    this.sliderMaxValue = this.addon.characteristics[0].value.max\n\n    this.slideOne();\n    this.slideTwo();\n  }\n\n  slideOne() {\n    if (parseInt(this.sliderTwo.value) - parseInt(this.sliderOne.value) <= this.minGap) {\n      this.sliderOne.value = parseInt(this.sliderTwo.value) - this.minGap;\n    }\n    this.fillColor();\n\n  }\n\n  slideTwo() {\n    if (parseInt(this.sliderTwo.value) - parseInt(this.sliderOne.value) <= this.minGap) {\n      this.sliderTwo.value = parseInt(this.sliderOne.value) + this.minGap;\n    }\n    this.fillColor();\n  }\n\n  sendValues() {\n    this.onUpdate.emit({\n      action: 'update', addon: {\n        author: this.addon.author,\n        id: this.addon.id,\n        name: this.addon.name,\n        characteristics: {\n          icon: this.addon.characteristics[0].icon,\n          maxLabel: this.addon.characteristics[0].maxLabel,\n          medLabel: this.addon.characteristics[0].medLabel,\n          minLabel: this.addon.characteristics[0].minLabel,\n          value: {\n            min: this.sliderOne.value,\n            max: this.sliderTwo.value\n          }\n        },\n      }\n    })\n  }\n\n  fillColor() {\n    const percent1 = this.sliderOne.value;\n    const percent2 = this.sliderTwo.value;\n    this.sliderTrack.style.background = `linear-gradient(90deg, #eeeeee ${percent1}% ,rgba(92, 184, 92, 0.1) ${percent1}% ,#5CB85C 1%, rgba(92, 184, 92, 0.1) ${percent2}%, #eeeeee ${percent2}%)`;\n  }\n\n}\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
@@ -759,11 +750,11 @@
                 "OnInit",
                 "AfterViewInit"
             ],
-            "templateData": "<div class='addon' *ngIf='addon'>\n    <img class='addon__icon' src=\"../assets/icons/{{addon.icon}}.svg\" alt=\"icon\">\n    <div class=\"container\">\n        <div class=\"name\">{{addon.characteristics[0].label | titlecase}}</div>\n        <div [id]='track' class=\"slider-track\"></div>\n        <input type=\"range\" (change)='sendValues()' min=\"0\" max=\"100\" [value]=\"addon.characteristics[0].value.min \"\n            [id]=\"slider1\" (input)=\"slideOne()\">\n        <input type=\"range\" (change)='sendValues()' min=\"0\" max=\"100\" [value]=\"addon.characteristics[0].value.max\"\n            [id]=\"slider2\" (input)=\"slideTwo()\">\n        <div class='addon__labels'>\n            <span>{{addon.characteristics[0].minLabel}}</span>\n            <span>{{addon.characteristics[0].medLabel}}</span>\n            <span>{{addon.characteristics[0].maxLabel}}</span>\n        </div>\n    </div>\n</div>"
+            "templateData": "<div class='addon' *ngIf='addon'>\n    <img class='addon__icon' src=\"../assets/icons/{{addon.characteristics[0].icon}}.svg\" alt=\"icon\">\n    <div class=\"container\">\n        <div class=\"name\">{{addon.characteristics[0].label | titlecase}}</div>\n        <div [id]='track' class=\"slider-track\"></div>\n        <input type=\"range\" (change)='sendValues()' min=\"0\" max=\"100\" [value]=\"addon.characteristics[0].value.min \"\n            [id]=\"slider1\" (input)=\"slideOne()\">\n        <input type=\"range\" (change)='sendValues()' min=\"0\" max=\"100\" [value]=\"addon.characteristics[0].value.max\"\n            [id]=\"slider2\" (input)=\"slideTwo()\">\n        <div class='addon__labels'>\n            <span>{{addon.characteristics[0].minLabel}}</span>\n            <span>{{addon.characteristics[0].medLabel}}</span>\n            <span>{{addon.characteristics[0].maxLabel}}</span>\n        </div>\n    </div>\n</div>"
         },
         {
             "name": "AppComponent",
-            "id": "component-AppComponent-bb75ca50a52e68f89739bbc820afbd56d9c7486529361ed4e4c16f3a889a8b9fb4c6042c5c6bc540c1c111a887488609664a9bf324a4e59f0b97948e448bb9e2",
+            "id": "component-AppComponent-7314cd98a9bd965cf3048642f21366334ae4b455cfcc3f4b284743997cd7718f77d8c594b8d8280df769f319996dea607b810917c3c5b3a57c29627b8e8a923a",
             "file": "src/app/app.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -835,35 +826,7 @@
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 43,
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "jsdoctags": [
-                        {
-                            "name": "addon",
-                            "type": "",
-                            "deprecated": false,
-                            "deprecationMessage": "",
-                            "tagName": {
-                                "text": "param"
-                            }
-                        }
-                    ]
-                },
-                {
-                    "name": "deleteAddon",
-                    "args": [
-                        {
-                            "name": "addon",
-                            "type": "",
-                            "deprecated": false,
-                            "deprecationMessage": ""
-                        }
-                    ],
-                    "optional": false,
-                    "returnType": "void",
-                    "typeParameters": [],
-                    "line": 71,
+                    "line": 44,
                     "deprecated": false,
                     "deprecationMessage": "",
                     "jsdoctags": [
@@ -932,7 +895,7 @@
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 37,
+                    "line": 38,
                     "deprecated": false,
                     "deprecationMessage": "",
                     "jsdoctags": [
@@ -960,7 +923,7 @@
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 52,
+                    "line": 53,
                     "deprecated": false,
                     "deprecationMessage": "",
                     "jsdoctags": [
@@ -988,7 +951,7 @@
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 62,
+                    "line": 61,
                     "deprecated": false,
                     "deprecationMessage": "",
                     "jsdoctags": [
@@ -1011,7 +974,7 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component, OnInit } from '@angular/core';\nimport { Store } from '@ngrx/store';\nimport { AddonModel, CreateAddonInput } from './graphql/models';\nimport { selectAddons } from './reducers';\nimport { createAddon, setAddon, updateAddon } from './reducers/actions';\nimport { AddonService } from './services/addon.service';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.scss']\n})\nexport class AppComponent implements OnInit {\n  addon: AddonModel;\n\n  addonSelected: AddonModel;\n  addonList$ = this.store.select(selectAddons);\n  selecting: boolean = false;\n  constructor(private addonService: AddonService, private store: Store) { }\n\n  ngOnInit() {\n\n    const addonIds = localStorage.getItem('addons');\n    if (addonIds) this.fetchAddons(JSON.parse(addonIds));\n  }\n\n  async fetchAddons(addonIds) {\n    for (let id of addonIds) {\n      const addon = await this.addonService.getAddonByID(id);\n      this.store.dispatch(setAddon({ addon: addon.data.getAddon }));\n    }\n  }\n\n\n\n\n  save(event) {\n    console.log('event', event);\n    if (event.action === 'create') this.createAddon(event.addon)\n    else if (event.action === 'update') this.updateAddon(event.addon)\n  }\n\n  createAddon(addon) {\n    this.addonService.createNewAddon(addon).then(data => {\n      console.log('data', data);\n      this.store.dispatch(createAddon({ addon: addon.data.createAddon }));\n    }).catch(error => {\n      console.log(error);\n    })\n  }\n\n  update(addon) {\n    this.selecting = true;\n    console.log('addon', addon);\n    this.addonSelected = addon;\n    console.log('selected', this.addonSelected);\n    setTimeout(() => {\n      this.selecting = false\n    }, 100);\n  }\n\n  updateAddon(addon) {\n    this.addonService.updateAddon(addon).then(data => {\n      console.log('data', data);\n      this.store.dispatch(updateAddon({ addon: addon.data.createAddon }));\n    }).catch(error => {\n      console.log(error);\n    })\n  }\n\n  deleteAddon(addon) {\n\n  }\n}\n",
+            "sourceCode": "import { Component, OnInit } from '@angular/core';\nimport { Store } from '@ngrx/store';\nimport { AddonModel, CreateAddonInput } from './graphql/models';\nimport { selectAddons } from './reducers';\nimport { createAddon, setAddon, updateAddon } from './reducers/actions';\nimport { AddonService } from './services/addon.service';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.scss']\n})\nexport class AppComponent implements OnInit {\n  addon: AddonModel;\n\n  addonSelected: AddonModel;\n  addonList$ = this.store.select(selectAddons);\n  selecting: boolean = false;\n  constructor(private addonService: AddonService, private store: Store) { }\n\n  ngOnInit() {\n\n    const addonIds = localStorage.getItem('addons');\n    if (addonIds) this.fetchAddons(JSON.parse(addonIds));\n  }\n\n  async fetchAddons(addonIds) {\n    for (let id of addonIds) {\n      const addon = await this.addonService.getAddonByID(id);\n      console.log('addon', addon);\n      this.store.dispatch(setAddon({ addon: addon.data.getAddon }));\n    }\n  }\n\n\n\n\n  save(event) {\n    console.log('event', event);\n    if (event.action === 'create') this.createAddon(event.addon)\n    else if (event.action === 'update') this.updateAddon(event.addon)\n  }\n\n  createAddon(addon) {\n    this.addonService.createNewAddon(addon).then(apires => {\n      console.log('data', apires);\n      this.store.dispatch(createAddon({ addon: apires.data.createAddon }));\n    }).catch(error => {\n      console.log(error);\n    })\n  }\n\n  update(addon) {\n    this.selecting = true;\n    this.addonSelected = addon;\n    setTimeout(() => {\n      this.selecting = false\n    }, 100);\n  }\n\n  updateAddon(addon) {\n    console.log('update', addon);\n    this.addonService.updateAddon(addon).then(apires => {\n      console.log('data', apires);\n      this.store.dispatch(updateAddon({ addon: apires.data.updateAddon }));\n    }).catch(error => {\n      console.log('error', error);\n    })\n  }\n\n}\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
@@ -1064,11 +1027,11 @@
             "implements": [
                 "OnInit"
             ],
-            "templateData": "<div class='main'>\r\n    <H2 class='main__title'>Addon Test</H2>\r\n    <div class=\"main__content\">\r\n        <div class='main__form'>\r\n            <button class='button' (click)='update(null)'>New</button>\r\n            <h3>Form</h3>\r\n            <app-form *ngIf='!selecting' [addon]='addonSelected' (onSave)='save($event)'></app-form>\r\n        </div>\r\n        <div class='main__list'>\r\n            <h3>List:</h3>\r\n            <div class=\"main__list-item\" *ngFor='let addon of addonList$ | async'>\r\n                <app-addon [addon]='addon' (onUpdate)='save($event)'> </app-addon>\r\n                <button class='button' (click)='update(addon)'>update</button>\r\n                <button class='button' (click)='deleteAddon(addon)'>delete</button>\r\n            </div>\r\n        </div>\r\n    </div>\r\n</div>"
+            "templateData": "<div class='main'>\r\n    <H2 class='main__title'>Addon Test</H2>\r\n    <div class=\"main__content\">\r\n        <div class='main__form'>\r\n            <button class='button' (click)='update(null)'>New</button>\r\n            <h3>Form</h3>\r\n            <app-form *ngIf='!selecting' [addon]='addonSelected' (onSave)='save($event)'></app-form>\r\n        </div>\r\n        <div class='main__list'>\r\n            <h3>List:</h3>\r\n            <div class=\"main__list-item\" *ngFor='let addon of addonList$ | async'>\r\n                <app-addon [addon]='addon' (onUpdate)='save($event)'> </app-addon>\r\n                <button class='button' (click)='update(addon)'>update</button>\r\n            </div>\r\n            <div *ngIf='(addonList$ | async).length === 0'>No data </div>\r\n        </div>\r\n    </div>\r\n</div>"
         },
         {
             "name": "FormComponent",
-            "id": "component-FormComponent-80447ae2504bc8e56c90b73edcd7848f52e7793ceab26d41e7f84e7b0bc965e601ff0dea65445df345c793d3b6ca866637f7a3d86c712e9ce413809b9812fc0e",
+            "id": "component-FormComponent-cb1dcd99504982216bea346545d5a6b9c637ca2581b352939c159b91088b4f39d91f4eaec9d1edeccceef856f0f0e962299d595a9c7b09cec73ea729ad962615",
             "file": "src/app/component/form/form.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -1131,7 +1094,7 @@
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 72,
+                    "line": 74,
                     "deprecated": false,
                     "deprecationMessage": ""
                 },
@@ -1173,7 +1136,7 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';\nimport { FormControl, FormGroup, Validators } from '@angular/forms';\n\n@Component({\n  selector: 'app-form',\n  templateUrl: './form.component.html',\n  styleUrls: ['./form.component.scss']\n})\nexport class FormComponent implements OnInit {\n\n  form: FormGroup;\n  error: string;\n\n  @Input('addon') addon: any;\n  @Output('onSave') onSave = new EventEmitter<any>();\n  constructor() { }\n\n\n  ngOnInit(): void {\n    if (this.addon?.id) {\n      this.form = new FormGroup({\n        id: new FormControl(this.addon.id),\n        name: new FormControl({ value: this.addon.name, disabled: true }, [Validators.required]),\n        author: new FormControl({ value: this.addon.author, disabled: true }),\n        icon: new FormControl(this.addon.icon, [Validators.required]),\n        label: new FormControl({ value: this.addon.characteristics[0].label, disabled: true }, [Validators.required]),\n        maxLabel: new FormControl({ value: this.addon.characteristics[0].maxLabel, disabled: true }),\n        medLabel: new FormControl({ value: this.addon.characteristics[0].medLabel, disabled: true }),\n        minLabel: new FormControl({ value: this.addon.characteristics[0].minLabel, disabled: true }),\n        max: new FormControl(this.addon.characteristics[0].value.max, [Validators.required]),\n        min: new FormControl(this.addon.characteristics[0].value.min, [Validators.required])\n      })\n    } else {\n      this.form = new FormGroup({\n        id: new FormControl(),\n        name: new FormControl('', [Validators.required]),\n        author: new FormControl(),\n        icon: new FormControl('angle', [Validators.required]),\n        label: new FormControl('', [Validators.required]),\n        maxLabel: new FormControl(''),\n        medLabel: new FormControl(''),\n        minLabel: new FormControl(''),\n        max: new FormControl(100, [Validators.required]),\n        min: new FormControl(0, [Validators.required])\n      })\n    }\n  }\n\n  save() {\n    if (this.form.invalid) {\n      this.error = `please fill all required fields`\n      return;\n    }\n    this.form.value.id ? this.updateObject() : this.createObject();\n    this.form.reset();\n  }\n\n  updateObject() {\n    const addonObject: any = {\n      id: this.form.value.id,\n      characteristics: {\n        value: {\n          min: this.form.value.min,\n          max: this.form.value.max\n        }\n      },\n      // icon: this.form.value.icon,\n    }\n    this.onSave.emit({ action: 'update', addon: addonObject })\n  }\n\n  createObject() {\n\n    const addonObject: any = {\n      author: this.form.value.author,\n      characteristics: {\n        label: this.form.value.label,\n        maxLabel: this.form.value.maxLabel,\n        medLabel: this.form.value.medLabel,\n        minLabel: this.form.value.minLabel,\n        value: {\n          min: this.form.value.min,\n          max: this.form.value.max\n        }\n      },\n      icon: this.form.value.icon,\n      name: this.form.value.name\n    }\n    this.onSave.emit({ action: 'create', addon: addonObject })\n  }\n}\n",
+            "sourceCode": "import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';\nimport { FormControl, FormGroup, Validators } from '@angular/forms';\n\n@Component({\n  selector: 'app-form',\n  templateUrl: './form.component.html',\n  styleUrls: ['./form.component.scss']\n})\nexport class FormComponent implements OnInit {\n\n  form: FormGroup;\n  error: string;\n\n  @Input('addon') addon: any;\n  @Output('onSave') onSave = new EventEmitter<any>();\n  constructor() { }\n\n\n  ngOnInit(): void {\n    if (this.addon?.id) {\n      this.form = new FormGroup({\n        id: new FormControl(this.addon.id),\n        name: new FormControl(this.addon.name, [Validators.required]),\n        author: new FormControl(this.addon.author),\n        icon: new FormControl(this.addon.characteristics[0].icon, [Validators.required]),\n        label: new FormControl({ value: this.addon.characteristics[0].label, disabled: true }, [Validators.required]),\n        maxLabel: new FormControl({ value: this.addon.characteristics[0].maxLabel, disabled: true }),\n        medLabel: new FormControl({ value: this.addon.characteristics[0].medLabel, disabled: true }),\n        minLabel: new FormControl({ value: this.addon.characteristics[0].minLabel, disabled: true }),\n        max: new FormControl(this.addon.characteristics[0].value.max, [Validators.required]),\n        min: new FormControl(this.addon.characteristics[0].value.min, [Validators.required])\n      })\n    } else {\n      this.form = new FormGroup({\n        id: new FormControl(),\n        name: new FormControl('', [Validators.required]),\n        author: new FormControl(),\n        icon: new FormControl('angle', [Validators.required]),\n        label: new FormControl('', [Validators.required]),\n        maxLabel: new FormControl(''),\n        medLabel: new FormControl(''),\n        minLabel: new FormControl(''),\n        max: new FormControl(100, [Validators.required]),\n        min: new FormControl(0, [Validators.required])\n      })\n    }\n  }\n\n  save() {\n    if (this.form.invalid) {\n      this.error = `please fill all required fields`\n      return;\n    }\n    this.form.value.id ? this.updateObject() : this.createObject();\n    this.form.reset();\n  }\n\n  updateObject() {\n    const addonObject: any = {\n      id: this.form.value.id,\n      // author: this.form.value.author,\n      // name: this.form.value.name,\n      characteristics: {\n        // icon: this.form.value.icon,\n        value: {\n          min: this.form.value.min,\n          max: this.form.value.max\n        }\n      },\n    }\n    this.onSave.emit({ action: 'update', addon: addonObject })\n  }\n\n  createObject() {\n\n    const addonObject: any = {\n      author: this.form.value.author,\n      characteristics: {\n        label: this.form.value.label,\n        maxLabel: this.form.value.maxLabel,\n        medLabel: this.form.value.medLabel,\n        minLabel: this.form.value.minLabel,\n        icon: this.form.value.icon,\n        value: {\n          min: this.form.value.min,\n          max: this.form.value.max\n        }\n      },\n      name: this.form.value.name\n    }\n    this.onSave.emit({ action: 'create', addon: addonObject })\n  }\n}\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
@@ -1312,7 +1275,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "",
-                "defaultValue": "`\r\nmutation CreateAddon($addon:CreateAddonInput!) {\r\ncreateAddon(input: $addon) {\r\nid\r\nauthor\r\ncharacteristics {\r\nlabel\r\nmaxLabel\r\nmedLabel\r\nminLabel\r\nvalue {\r\nmax\r\nmin\r\n}\r\n}\r\nname\r\n}\r\n}\r\n`"
+                "defaultValue": "`\r\nmutation CreateAddon($addon:CreateAddonInput!) {\r\ncreateAddon(input: $addon) {\r\nid\r\nauthor\r\ncharacteristics {\r\nlabel\r\nmaxLabel\r\nmedLabel\r\nminLabel\r\nicon\r\nvalue {\r\nmax\r\nmin\r\n}\r\n}\r\nname\r\n}\r\n}\r\n`"
             },
             {
                 "name": "deleteAddon",
@@ -1362,7 +1325,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "",
-                "defaultValue": "`\r\n    query getAddon($id:ID!){\r\n        getAddon(id:$id){\r\n            id\r\n            author\r\n            characteristics {\r\n                label\r\n                maxLabel\r\n                medLabel\r\n                minLabel\r\n                value {\r\n                    max\r\n                    min\r\n                }\r\n            }\r\n            name\r\n        }\r\n    }\r\n`"
+                "defaultValue": "`\r\n    query getAddon($id:ID!){\r\n        getAddon(id:$id){\r\n            id\r\n            author\r\n            characteristics {\r\n                label\r\n                maxLabel\r\n                medLabel\r\n                minLabel\r\n                icon\r\n                value {\r\n                    max\r\n                    min\r\n                }\r\n            }\r\n            name\r\n        }\r\n    }\r\n`"
             },
             {
                 "name": "initialState",
@@ -1461,7 +1424,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "",
-                "defaultValue": "`\r\n    mutation updateAddon($addon:UpdateAddonInput!){\r\n        updateAddon(input: $addon) {\r\n            author\r\n            id\r\n            name\r\n            characteristics {\r\n                value {\r\n                    max\r\n                    min\r\n            }\r\n        }\r\n    }\r\n}\r\n\r\n`"
+                "defaultValue": "`mutation UpdateAddon($addon:UpdateAddonInput!){\r\n    updateAddon(input: $addon) {\r\n        id\r\n        author\r\n        name\r\n        characteristics {\r\n            label\r\n            maxLabel\r\n            medLabel\r\n            minLabel\r\n            icon\r\n            value {\r\n                max\r\n                min\r\n            }\r\n        }\r\n    }\r\n}\r\n\r\n`"
             },
             {
                 "name": "visibility",
@@ -1702,7 +1665,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "",
-                    "defaultValue": "`\r\nmutation CreateAddon($addon:CreateAddonInput!) {\r\ncreateAddon(input: $addon) {\r\nid\r\nauthor\r\ncharacteristics {\r\nlabel\r\nmaxLabel\r\nmedLabel\r\nminLabel\r\nvalue {\r\nmax\r\nmin\r\n}\r\n}\r\nname\r\n}\r\n}\r\n`"
+                    "defaultValue": "`\r\nmutation CreateAddon($addon:CreateAddonInput!) {\r\ncreateAddon(input: $addon) {\r\nid\r\nauthor\r\ncharacteristics {\r\nlabel\r\nmaxLabel\r\nmedLabel\r\nminLabel\r\nicon\r\nvalue {\r\nmax\r\nmin\r\n}\r\n}\r\nname\r\n}\r\n}\r\n`"
                 },
                 {
                     "name": "updateAddon",
@@ -1712,7 +1675,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "",
-                    "defaultValue": "`\r\n    mutation updateAddon($addon:UpdateAddonInput!){\r\n        updateAddon(input: $addon) {\r\n            author\r\n            id\r\n            name\r\n            characteristics {\r\n                value {\r\n                    max\r\n                    min\r\n            }\r\n        }\r\n    }\r\n}\r\n\r\n`"
+                    "defaultValue": "`mutation UpdateAddon($addon:UpdateAddonInput!){\r\n    updateAddon(input: $addon) {\r\n        id\r\n        author\r\n        name\r\n        characteristics {\r\n            label\r\n            maxLabel\r\n            medLabel\r\n            minLabel\r\n            icon\r\n            value {\r\n                max\r\n                min\r\n            }\r\n        }\r\n    }\r\n}\r\n\r\n`"
                 }
             ],
             "src/environments/environment.prod.ts": [
@@ -1748,7 +1711,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "",
-                    "defaultValue": "`\r\n    query getAddon($id:ID!){\r\n        getAddon(id:$id){\r\n            id\r\n            author\r\n            characteristics {\r\n                label\r\n                maxLabel\r\n                medLabel\r\n                minLabel\r\n                value {\r\n                    max\r\n                    min\r\n                }\r\n            }\r\n            name\r\n        }\r\n    }\r\n`"
+                    "defaultValue": "`\r\n    query getAddon($id:ID!){\r\n        getAddon(id:$id){\r\n            id\r\n            author\r\n            characteristics {\r\n                label\r\n                maxLabel\r\n                medLabel\r\n                minLabel\r\n                icon\r\n                value {\r\n                    max\r\n                    min\r\n                }\r\n            }\r\n            name\r\n        }\r\n    }\r\n`"
                 }
             ]
         },
@@ -1814,7 +1777,7 @@
                 "linktype": "component",
                 "name": "AppComponent",
                 "coveragePercent": 0,
-                "coverageCount": "0/13",
+                "coverageCount": "0/12",
                 "status": "low"
             },
             {
@@ -1891,7 +1854,7 @@
                 "linktype": "interface",
                 "name": "AddonCharacteristics",
                 "coveragePercent": 0,
-                "coverageCount": "0/6",
+                "coverageCount": "0/7",
                 "status": "low"
             },
             {
@@ -1900,7 +1863,7 @@
                 "linktype": "interface",
                 "name": "AddonCharacteristicsInput",
                 "coveragePercent": 0,
-                "coverageCount": "0/6",
+                "coverageCount": "0/7",
                 "status": "low"
             },
             {
@@ -1918,7 +1881,7 @@
                 "linktype": "interface",
                 "name": "AddonModel",
                 "coveragePercent": 0,
-                "coverageCount": "0/6",
+                "coverageCount": "0/5",
                 "status": "low"
             },
             {
@@ -1936,7 +1899,7 @@
                 "linktype": "interface",
                 "name": "CreateAddonInput",
                 "coveragePercent": 0,
-                "coverageCount": "0/5",
+                "coverageCount": "0/4",
                 "status": "low"
             },
             {
@@ -1954,7 +1917,7 @@
                 "linktype": "interface",
                 "name": "UpdateAddonInput",
                 "coveragePercent": 0,
-                "coverageCount": "0/6",
+                "coverageCount": "0/5",
                 "status": "low"
             },
             {

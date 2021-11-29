@@ -28,13 +28,14 @@ export const angle = () => ({
                 label: 'angle',
                 maxLabel: 'Directly above',
                 medLabel: '',
+                icon: 'angle',
                 minLabel: 'Front on',
                 value: {
                     min: 0,
                     max: 100
                 }
             }],
-            icon: 'angle',
+
             id: 'adf-asdf-asdf-as',
             name: 'Angle abc'
         }
@@ -49,13 +50,14 @@ export const distance = () => ({
                 label: 'distance',
                 maxLabel: 'Long distance',
                 medLabel: 'City block',
+                icon: 'distance',
                 minLabel: 'Face-to-face',
                 value: {
                     min: 0,
                     max: 100
                 }
             }],
-            icon: 'distance',
+
             id: 'adf-asdf-asdf-as',
             name: 'Distance abc'
         }
@@ -71,12 +73,13 @@ export const lighting = () => ({
                 maxLabel: 'Night',
                 medLabel: 'Shadowy',
                 minLabel: 'Daytime',
+                icon: 'lighting',
                 value: {
                     min: 0,
                     max: 100
                 }
             }],
-            icon: 'lighting',
+
             id: 'adf-asdf-asdf-as',
             name: 'lighting abc'
         }
@@ -92,12 +95,13 @@ export const visibility = () => ({
                 maxLabel: 'Crowded',
                 medLabel: 'Some groups',
                 minLabel: 'Clear scene',
+                icon: 'visibility',
                 value: {
                     min: 0,
                     max: 100
                 }
             }],
-            icon: 'visibility',
+
             id: 'adf-asdf-asdf-as',
             name: 'visibility abc'
         }
