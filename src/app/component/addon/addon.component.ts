@@ -67,6 +67,7 @@ export class AddonComponent implements OnInit, AfterViewInit {
         id: this.addon.id,
         name: this.addon.name,
         characteristics: {
+          label: this.addon.characteristics[0].label,
           icon: this.addon.characteristics[0].icon,
           maxLabel: this.addon.characteristics[0].maxLabel,
           medLabel: this.addon.characteristics[0].medLabel,

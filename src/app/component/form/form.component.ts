@@ -23,10 +23,10 @@ export class FormComponent implements OnInit {
         name: new FormControl(this.addon.name, [Validators.required]),
         author: new FormControl(this.addon.author),
         icon: new FormControl(this.addon.characteristics[0].icon, [Validators.required]),
-        label: new FormControl({ value: this.addon.characteristics[0].label, disabled: true }, [Validators.required]),
-        maxLabel: new FormControl({ value: this.addon.characteristics[0].maxLabel, disabled: true }),
-        medLabel: new FormControl({ value: this.addon.characteristics[0].medLabel, disabled: true }),
-        minLabel: new FormControl({ value: this.addon.characteristics[0].minLabel, disabled: true }),
+        label: new FormControl(this.addon.characteristics[0].label, [Validators.required]),
+        maxLabel: new FormControl(this.addon.characteristics[0].maxLabel),
+        medLabel: new FormControl(this.addon.characteristics[0].medLabel),
+        minLabel: new FormControl(this.addon.characteristics[0].minLabel),
         max: new FormControl(this.addon.characteristics[0].value.max, [Validators.required]),
         min: new FormControl(this.addon.characteristics[0].value.min, [Validators.required])
       })
@@ -58,10 +58,12 @@ export class FormComponent implements OnInit {
   updateObject() {
     const addonObject: any = {
       id: this.form.value.id,
-      // author: this.form.value.author,
-      // name: this.form.value.name,
       characteristics: {
-        // icon: this.form.value.icon,
+        icon: this.form.value.icon,
+        label: this.form.value.label,
+        maxLabel: this.form.value.maxLabel,
+        medLabel: this.form.value.medLabel,
+        minLabel: this.form.value.minLabel,
         value: {
           min: this.form.value.min,
           max: this.form.value.max
