@@ -27,6 +27,7 @@ export class AppComponent implements OnInit {
   async fetchAddons(addonIds) {
     for (let id of addonIds) {
       const addon = await this.addonService.getAddonByID(id);
+      console.log('addon', addon);
       this.store.dispatch(setAddon({ addon: addon.data.getAddon }));
     }
   }
@@ -41,9 +42,9 @@ export class AppComponent implements OnInit {
   }
 
   createAddon(addon) {
-    this.addonService.createNewAddon(addon).then(data => {
-      console.log('data', data);
-      this.store.dispatch(createAddon({ addon: addon.data.createAddon }));
+    this.addonService.createNewAddon(addon).then(apires => {
+      console.log('data', apires);
+      this.store.dispatch(createAddon({ addon: apires.data.createAddon }));
     }).catch(error => {
       console.log(error);
     })
@@ -51,20 +52,19 @@ export class AppComponent implements OnInit {
 
   update(addon) {
     this.selecting = true;
-    console.log('addon', addon);
     this.addonSelected = addon;
-    console.log('selected', this.addonSelected);
     setTimeout(() => {
       this.selecting = false
     }, 100);
   }
 
   updateAddon(addon) {
-    this.addonService.updateAddon(addon).then(data => {
-      console.log('data', data);
-      this.store.dispatch(updateAddon({ addon: addon.data.createAddon }));
+    console.log('update', addon);
+    this.addonService.updateAddon(addon).then(apires => {
+      console.log('data', apires);
+      this.store.dispatch(updateAddon({ addon: apires.data.updateAddon }));
     }).catch(error => {
-      console.log(error);
+      console.log('error', error);
     })
   }
 

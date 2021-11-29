@@ -8,6 +8,7 @@ export const getAddonByID = `
                 maxLabel
                 medLabel
                 minLabel
+                icon
                 value {
                     max
                     min

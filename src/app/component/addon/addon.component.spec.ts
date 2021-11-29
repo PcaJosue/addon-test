@@ -19,6 +19,7 @@ describe('AddonComponent', () => {
     component = fixture.componentInstance;
     component.addon = component.addon = {
       characteristics: [{
+        icon: 'angle',
         label: 'angle',
         maxLabel: 'directly above',
         medLabel: '',
@@ -27,20 +28,10 @@ describe('AddonComponent', () => {
           max: 100,
           min: 0
         }
-      },
-      {
-        label: 'angle',
-        maxLabel: 'directly above',
-        medLabel: '',
-        minLabel: 'Front on',
-        value: {
-          max: 80,
-          min: 20
-        }
       }],
       name: 'Addon ABCD',
       author: 'Josue Pacheco',
-      icon: 'angle',
+
       id: 'adsf'
     }
     fixture.detectChanges();

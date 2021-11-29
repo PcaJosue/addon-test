@@ -63,21 +63,26 @@ export class AddonComponent implements OnInit, AfterViewInit {
   sendValues() {
     this.onUpdate.emit({
       action: 'update', addon: {
+        author: this.addon.author,
         id: this.addon.id,
+        name: this.addon.name,
         characteristics: {
+          icon: this.addon.characteristics[0].icon,
+          maxLabel: this.addon.characteristics[0].maxLabel,
+          medLabel: this.addon.characteristics[0].medLabel,
+          minLabel: this.addon.characteristics[0].minLabel,
           value: {
             min: this.sliderOne.value,
             max: this.sliderTwo.value
           }
         },
-        // icon: this.form.value.icon,
       }
     })
   }
 
   fillColor() {
-    const percent1 = (this.sliderOne.value / this.sliderMaxValue) * 100;
-    const percent2 = (this.sliderTwo.value / this.sliderMaxValue) * 100;
+    const percent1 = this.sliderOne.value;
+    const percent2 = this.sliderTwo.value;
     this.sliderTrack.style.background = `linear-gradient(90deg, #eeeeee ${percent1}% ,rgba(92, 184, 92, 0.1) ${percent1}% ,#5CB85C 1%, rgba(92, 184, 92, 0.1) ${percent2}%, #eeeeee ${percent2}%)`;
   }
 

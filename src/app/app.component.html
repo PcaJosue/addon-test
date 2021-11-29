@@ -12,6 +12,7 @@
                 <app-addon [addon]='addon' (onUpdate)='save($event)'> </app-addon>
                 <button class='button' (click)='update(addon)'>update</button>
             </div>
+            <div *ngIf='(addonList$ | async).length === 0'>No data </div>
         </div>
     </div>
 </div>

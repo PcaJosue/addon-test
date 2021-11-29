@@ -1,5 +1,5 @@
 <div class='addon' *ngIf='addon'>
-    <img class='addon__icon' src="../assets/icons/{{addon.icon}}.svg" alt="icon">
+    <img class='addon__icon' src="../assets/icons/{{addon.characteristics[0].icon}}.svg" alt="icon">
     <div class="container">
         <div class="name">{{addon.characteristics[0].label | titlecase}}</div>
         <div [id]='track' class="slider-track"></div>

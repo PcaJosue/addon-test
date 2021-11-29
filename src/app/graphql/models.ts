@@ -1,7 +1,6 @@
 export interface AddonModel {
     author?: string
     characteristics: AddonCharacteristics[]
-    icon: string
     id: string
     name: string
 }
@@ -11,6 +10,7 @@ export interface AddonCharacteristics {
     maxLabel?: string
     medLabel?: string
     minLabel?: string
+    icon: string
     value: CharacteristicsValue
 }
 
@@ -27,7 +27,6 @@ export interface AddonCharacteristicsValueInput {
 export interface CreateAddonInput {
     author?: string
     characteristics: AddonCharacteristicsInput[]
-    icon: string
     name: string
 }
 
@@ -38,16 +37,16 @@ export interface DeleteAddonInput {
 export interface UpdateAddonInput {
     author?: string
     characteristics?: AddonCharacteristicsInput[]
-    icon?: string
     id: string
     name?: string
 }
 
 export interface AddonCharacteristicsInput {
-    label?: string
-    maxLabel?: string
-    medLabel?: string
-    minLabel?: string
+    icon?: string
+    label?: String
+    maxLabel?: String
+    medLabel?: String
+    minLabel?: String
     value: AddonCharacteristicsValueInput
 }
 

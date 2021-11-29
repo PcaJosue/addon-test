@@ -9,6 +9,7 @@ label
 maxLabel
 medLabel
 minLabel
+icon
 value {
 max
 min
@@ -20,16 +21,20 @@ name
 `;
 
 
-export const updateAddon = `
-    mutation updateAddon($addon:UpdateAddonInput!){
-        updateAddon(input: $addon) {
-            author
-            id
-            name
-            characteristics {
-                value {
-                    max
-                    min
+export const updateAddon = `mutation UpdateAddon($addon:UpdateAddonInput!){
+    updateAddon(input: $addon) {
+        id
+        author
+        name
+        characteristics {
+            label
+            maxLabel
+            medLabel
+            minLabel
+            icon
+            value {
+                max
+                min
             }
         }
     }
